@@ -51,17 +51,17 @@ Open `src/breast_cancer_predict_report.ipynb` in Jupyter Lab and under the "Kern
 
 # Data
 
-CardioPredict is based on data from the [Framingham Heart Study](https://clinicaltrials.gov/study/NCT00005121), an extensive cohort study that tracks health metrics related to heart disease.
+CardioPredict is based on data from the [Framingham Heart Study](https://clinicaltrials.gov/study/NCT00005121), an extensive cohort study that tracks health metrics related to heart disease. The full Framingham dataset, encompassing data from the first 32 clinical exams and event follow-up until 2018, is available upon request from the [National Institutes of Health](https://biolincc.nhlbi.nih.gov/studies/framcohort/).
 
 ## Source Data
 
-Dataset can be found [here](https://paulblanche.com/files/DataFramingham.html)
+ For this project, we utilized a refined subset obtained from [Paul Blanche's dataset](https://paulblanche.com/files/DataFramingham.html), which contains 1,363 records detailing key health indicators such as age, blood pressure, cholesterol, smoking habits, and occurrences of heart disease.
 
 ## Data Overiew
 
 The dataset includes variables such as age, gender, blood pressure, cholesterol levels, and smoking habits, analyzed to predict the likelihood of developing heart disease.
 
-Some EDA visual images here. 
+Some EDA visual images here.
 
 # Code structure (optional)
 
@@ -69,18 +69,16 @@ The project is structured as follows:
 
 ```bash
 ├── data
-│   ├── data1.csv
-│   ├── data2.csv
-│   ├── cleanedData
-│       ├── cleaneddata1.csv
-|       └── cleaneddata2.csv
+│   └── framingham.csv
 ├── data_acquisition.py
 ├── data_preprocessing.ipynb
 ├── data_analysis.ipynb
 ├── data_modelling.ipynb
 ├── Img
-│   ├── img1.png
-│   └── Headerheader.jpg
+│   └── CardioPredict.png
+├── CODE_OF_CONDUCT.md
+├── CONTRIBUTING.md
+├── environment.yml  
 ├── LICENSE
 ├── README.md
 └── .gitignore
@@ -96,7 +94,10 @@ Future extensions of this project could include exploring more complex models, i
 
 # References
 
-Framingham Heart Study (Original Source)
+- Framingham Heart Study [https://www.framinghamheartstudy.org/](https://www.framinghamheartstudy.org/)
+- Framingham Heart Study Longitudinal Data Documentation for Teaching Dataset [https://biolincc.nhlbi.nih.gov/media/teachingstudies/FHS_Teaching_Longitudinal_Data_Documentation_2021a.pdf](https://biolincc.nhlbi.nih.gov/media/teachingstudies/FHS_Teaching_Longitudinal_Data_Documentation_2021a.pdf)
+- Andersson C, Johnson A D, Benjamin E J, et al. 70-year legacy of the Framingham Heart Study[J]. Nature Reviews Cardiology, 2019, 16(11): 687-698. [https://www.nature.com/articles/s41569-01](https://www.nature.com/articles/s41569-019-0202-5)
+- World Heart Report 2023[https://world-heart-federation.org/wp-content/uploads/World-Heart-Report-2023.pdf](https://world-heart-federation.org/wp-content/uploads/World-Heart-Report-2023.pdf)
 
 # License
 
