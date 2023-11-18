@@ -1,6 +1,7 @@
-<img src="img/CardioPredict.png" alt="Alt text for image" width="800" height="400">
-
-    Image created by DALL-3
+<figure>
+    <img src="img/CardioPredict.png" alt="Alt text for image" width="800" height="400">
+    <figcaption>Created by DALL-E</figcaption>
+</figure>
 
 # CardioPredict: Assessing Heart Disease Risk
 
