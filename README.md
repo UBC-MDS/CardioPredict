@@ -79,7 +79,6 @@ The project is structured as follows:
 ```bash
 ├── data
 │   └── framingham.csv
-├── heart_disease_analysis.ipynb
 ├── heart_analyis_model.ipynb
 ├── heart_analyis_model.html
 ├── Img
@@ -88,8 +87,7 @@ The project is structured as follows:
 ├── CONTRIBUTING.md
 ├── environment.yaml  
 ├── LICENSE
-├── README.md
-└── .gitignore
+└── README.md
 ```
 
 # Results and Evaluation
