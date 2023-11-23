@@ -1,0 +1,13 @@
+services:
+  disease_pred:
+    image: 522_project_10 
+    ports:
+      - "8888:8888"
+    volumes:
+      - .:/home/jovyan/work
+    deploy:
+      resources:
+        limits:
+          memory: 5G
+    platform: linux/
+      
