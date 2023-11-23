@@ -5,7 +5,7 @@ RUN  conda install -y \
     matplotlib=3.8.0 \
     nb_conda_kernels=2.3.1 \
     pandas=2.1.1 \
-    scikit-learn=1.3.1 
+    scikit-learn=1.3.1 git 
     #vega_datasets= 0.9.0 \
     #vegafusion=1.4.3 \
     #vegafusion-jupyter=1.4.3 \
