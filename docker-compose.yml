@@ -1,6 +1,6 @@
 services:
   disease_pred:
-    image: 522_project_10 
+    image: sandragross/522_project_10:f53957a
     ports:
       - "8888:8888"
     volumes:
@@ -9,5 +9,5 @@ services:
       resources:
         limits:
           memory: 5G
-    platform: linux/
+    platform: linux/amd64
       
