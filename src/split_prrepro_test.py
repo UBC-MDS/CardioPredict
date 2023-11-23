@@ -32,6 +32,20 @@ def preprocess_and_split_data(input_file, output_train_file, output_test_file, n
     Returns:
     -------
     None
+
+    Examples:
+    --------
+    To use this function, provide the paths to your input data and output files,
+    along with the lists of numeric and categorical features:
+
+    >>> preprocess_and_split_data("path/to/framingham.csv", 
+                                  "path/to/train_df.csv", 
+                                  "path/to/test_df.csv",
+                                  ['AGE', 'FRW', 'SBP', 'DBP', 'CHOL', 'CIG'], 
+                                  ['sex'])
+    
+    This will read the 'framingham.csv' file, perform preprocessing, split the data into
+    training and testing sets, and then save these sets to 'train_df.csv' and 'test_df.csv'.
     """
     # Read data
     df = pd.read_csv(input_file)
