@@ -2,7 +2,19 @@ import altair as alt
 
 def create_pairwise_scatter_plot(df, features):
     """
-    Revised function to create a pairwise scatter plot matrix.
+    Create a pairwise scatter plot matrix from a given DataFrame and a list of features.
+
+    This function generates a matrix of scatter plots, each plot comparing two different
+    features from the provided list. The plots use independent scales for each axis and 
+    points are colored by the 'disease' category. Opacity and size of points are set for 
+    better visibility. 
+
+    Parameters:
+    df (DataFrame): The DataFrame containing the data to plot.
+    features (list of str): A list of column names from the DataFrame to be used as features for the scatter plots.
+
+    Returns:
+    Chart: An Altair Chart object representing the pairwise scatter plot matrix.
     """
     base = alt.Chart(df).mark_point(opacity=0.5, size=10)
 

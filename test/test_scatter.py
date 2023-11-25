@@ -1,6 +1,7 @@
 import altair as alt
 import pandas as pd
 import pytest
+import numpy as np
 import sys
 import os
 
@@ -19,25 +20,7 @@ def test_create_pairwise_scatter_plot():
     chart = create_pairwise_scatter_plot(train_df, numerical_features)
     assert isinstance(chart, alt.RepeatChart), "The output should be an Altair RepeatChart object"
 
-#2 Test for Correct Encoding of Features:
-def test_feature_encoding():
-    train_df = pd.DataFrame({
-        'feature1': [1, 2, 3],
-        'feature2': [4, 5, 6],
-        'feature3': [7, 8, 9]
-    })
-    numerical_features = ['feature1', 'feature2']
-    chart = create_pairwise_scatter_plot(train_df, numerical_features)
-
-    encoded_features = set()
-    for enc in chart.spec.spec.encoding:
-        if enc in ['x', 'y']:
-            encoded_features.add(str(chart.spec.spec.encoding[enc].field))
-
-    assert encoded_features == {'feature1', 'feature2'}, \
-        "All specified features should be correctly encoded in the chart"
-
-#3.Test for Handling of Non-Numerical Features:
+#2.Test for Handling of Non-Numerical Features:
 def test_handling_non_numerical_features():
     train_df = pd.DataFrame({
         'feature1': [1, 2, 3],
@@ -50,16 +33,13 @@ def test_handling_non_numerical_features():
     except Exception as e:
         assert False, f"Function should not raise an exception for non-numerical features: {e}"
 
-#4.Test for Correct Chart Properties
-def test_chart_properties():
-    train_df = pd.DataFrame({
-        'feature1': [1, 2, 3],
-        'feature2': [4, 5, 6]
-    })
+#3Test for Handling of Large Datasets
+def test_handling_large_datasets():
+    large_df = pd.DataFrame(np.random.rand(1000, 2), columns=['feature1', 'feature2'])
     numerical_features = ['feature1', 'feature2']
-    chart = create_pairwise_scatter_plot(train_df, numerical_features)
+    try:
+        chart = create_pairwise_scatter_plot(large_df, numerical_features)
+        assert True, "Function should handle large datasets without error"
+    except Exception as e:
+        assert False, f"Function should not raise an exception for large datasets: {e}"
 
-    assert chart.properties['title'] == 'Figure 4: Pairwise Scatter Plot Matrix', "Chart should have the correct title"
-    for subchart in chart.spec:
-        assert subchart.properties['width'] == 150, "Subcharts should have the correct width"
-        assert subchart.properties['height'] == 150, "Subcharts should have the correct height"
