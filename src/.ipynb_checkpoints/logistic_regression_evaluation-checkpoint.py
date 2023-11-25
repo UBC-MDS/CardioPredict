@@ -12,6 +12,9 @@ from sklearn.metrics import ConfusionMatrixDisplay, classification_report
 
 
 
+# setting seed
+np.random.seed(123)
+
 def evaluate_logistic_regression(X_train, y_train, X_test, y_test, numeric_features, categorical_features):
     """
     Evaluate the logistic regression model with hyperparameter tuning using GridSearchCV.
@@ -58,12 +61,31 @@ def evaluate_logistic_regression(X_train, y_train, X_test, y_test, numeric_featu
     'mean_train_score', 'std_train_score', 'mean_test_score', 'std_test_score']].sort_values('rank_test_score')
 
 
- 
+    # Output best parameters and scores
+    print("Best Parameters: ", gs.best_params_)
+    print("Best Score: ", gs.best_score_)
+    print("Test Set Score: ", gs.score(X_test, y_test))
 
-    # Generate the confusion matrix
+    # Generate and display confusion matrix
     cm = confusion_matrix(y_test, gs.predict(X_test))
+    cm_df = pd.DataFrame(cm, 
+                     index=['True: 0', 'True: 1'], 
+                     columns=['Pred: 0', 'Pred: 1'])
+
+    print("Confusion Matrix:")
+    print(cm_df)
+
 
     # Generate and print classification report
-    report = classification_report(y_test, gs.predict(X_test), zero_division = 1)
+    report_string = classification_report(y_test, gs.predict(X_test), zero_division = 1)
+    print('Classification Report for Test Data:\n', report_string)
+    rt = classification_report(y_test, gs.predict(X_test), zero_division=1, output_dict=True)
+    report_df = pd.DataFrame(rt).transpose()
+    print(report_df)
 
-    return cm, report, gs, gs_res
+    
+
+    return cm_df, report_df, gs, gs_res
+
+
+

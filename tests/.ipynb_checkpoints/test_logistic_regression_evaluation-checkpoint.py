@@ -42,27 +42,28 @@ categorical_features = ['sex']
 
 # Test for correct return type
 def test_evaluate_logistic_regression_output_type():
-    cm, report, gs, gs_res = evaluate_logistic_regression(
+    cm_df, report_df, gs, gs_res = evaluate_logistic_regression(
         X_train, y_train, X_test, y_test, numeric_features, categorical_features
     )
-    assert isinstance(cm, np.ndarray), "'evaluate_logistic_regression' should return a numpy array for the confusion matrix"
-    assert isinstance(report, str), "'evaluate_logistic_regression' should return a string for the classification report"
-    assert isinstance(gs, GridSearchCV), "'evaluate_logistic_regression' should return a GridSearchCV object"
-    assert isinstance(gs_res, pd.DataFrame), "'evaluate_logistic_regression' should return a pandas DataFrame for the grid search results"
+    assert isinstance(cm_df, pd.DataFrame), "'evaluate_logistic_regression' should return a pandas data frame for the confusion matrix"
+    assert isinstance(report_df, pd.DataFrame), "'evaluate_logistic_regression' should return a pandas data frame for the classification report"
+    assert isinstance(gs, GridSearchCV), "'evaluate_logistic_regression' should return an GridSearchCV object"
+    assert isinstance(gs_res, pd.DataFrame), "'evaluate_logistic_regression' should return a pandas DataFrame for the gridsearch result"
 
-
+# Test whether the confusion matrix and classification report have the correct format and expected columns
 def test_evaluate_logistic_regression_output_format():
-    cm, report, gs, gs_res = evaluate_logistic_regression(
+    cm_df, report_df, gs, gs_res = evaluate_logistic_regression(
         X_train, y_train, X_test, y_test, numeric_features, categorical_features
     )
     
     # Confusion Matrix checks
-    assert cm.shape == (2, 2), "Confusion matrix should have a shape of 2x2 for binary classification"
+    assert cm_df.shape == (2, 2), "Confusion matrix should have a shape of 2x2 for binary classification"
+    assert all(column in cm_df for column in ['Pred: 0', 'Pred: 1']), "Confusion matrix columns are incorrect"
     
     # Classification Report checks
-    assert 'precision' in report, "Classification report should contain 'precision'"
-    assert 'recall' in report, "Classification report should contain 'recall'"
-    assert 'f1-score' in report, "Classification report should contain 'f1-score'"
+    expected_report_columns = ['precision', 'recall', 'f1-score', 'support']
+    assert all(column in report_df for column in expected_report_columns), "Classification report columns are incorrect"
+    assert report_df.index.isin(['0', '1', 'accuracy', 'macro avg', 'weighted avg']).all(), "Classification report row indices are incorrect"
 
 # Test whether the GridSearchCV is fitted and has the excepted attributes
 def test_grid_search_is_fitted():
