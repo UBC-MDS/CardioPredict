@@ -11,21 +11,18 @@ from sklearn.metrics import confusion_matrix
 from sklearn.metrics import ConfusionMatrixDisplay, classification_report
 
 
-# # Import the run_knn_analysis function from the src folder
-# sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
-# from src.run_knn_analysis import run_knn_analysis
 
 # setting seed
 np.random.seed(123)
 
 def evaluate_logistic_regression(X_train, y_train, X_test, y_test, numeric_features, categorical_features):
     """
-    Process the training data and evaluate the logistic regression model on test data.
+    Evaluate the logistic regression model with hyperparameter tuning using GridSearchCV.
 
-    Creates a preprocessing pipeline for numeric and categorical features, 
-    fits a logistic regression model using GridSearchCV to find the best hyperparameters, 
-    and evaluates the model's performance on the test set. 
-    It outputs the  confusion matrix , the classification report for the test data, .
+    This function processes the training data and evaluates the logistic regression model on the test data.
+    It creates a preprocessing pipeline for numeric and categorical features and performs hyperparameter 
+    tuning to find the best model. It then outputs the confusion matrix and classification report for 
+    the test data, along with  the fitted GridSearchCV object and the results of the GridSearchCV.
 
     Parameters:
     - X_train (pd.DataFrame): Training data features.
@@ -36,7 +33,10 @@ def evaluate_logistic_regression(X_train, y_train, X_test, y_test, numeric_featu
     - categorical_features (list): List of column names for categorical features.
 
     Returns:
-    - tuple: A tuple containing the Confusion Matrix and the classification report.
+    - cm_df (pd.DataFrame): Confusion matrix  as a DataFrame.
+    - report_df (pd.DataFrame): Classification report  as a DataFrame.
+    - gs (GridSearchCV): Fitted GridSearchCV object.
+    - gs_res (pd.DataFrame): DataFrame containing the cross-validation results from GridSearchCV.
     """
 
     # Create pipeline for numeric features

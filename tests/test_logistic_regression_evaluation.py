@@ -12,12 +12,14 @@ from sklearn.metrics import classification_report, confusion_matrix
 # Add the parent directory to the sys.path to allow imports from the src directory
 sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 
-# import  module
+# import module
 from src.logistic_regression_evaluation import evaluate_logistic_regression
 
 
 # Test data for 'evaluate_logistic_regression'
-np.random.seed(522)  # For reproducibility
+
+# set seed for reproducibility
+np.random.seed(123)  
 num_samples = 100
 test_data_lr = {
     'AGE': np.random.randint(18, 100, num_samples),
@@ -32,7 +34,7 @@ test_data_lr = {
 df = pd.DataFrame(test_data_lr)
 X = df.drop('disease', axis=1)
 y = df['disease']
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=123)
 numeric_features = ['AGE', 'FRW', 'SBP', 'DBP', 'CHOL', 'CIG']
 categorical_features = ['sex']
 
