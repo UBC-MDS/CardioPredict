@@ -59,22 +59,20 @@ docker compose up
 ```
 
 4. Access Jupyter Lab
+   After running the above command, Docker will start Jupyter Lab.
+   Look for a URL in the terminal output that starts with [http://127.0.0.1:8888/lab?token=]().
+   Copy this URL and paste it into your web browser to access Jupyter Lab.
+   Run the Analysis Notebook
 
-After running the above command, Docker will start Jupyter Lab.
-Look for a URL in the terminal output that starts with [http://127.0.0.1:8888/lab?token=]().
-Copy this URL and paste it into your web browser to access Jupyter Lab.
-Run the Analysis Notebook
-
-In Jupyter Lab, navigate to and open the data_analysis_final_report.ipynb notebook (or the relevant notebook for your analysis).
-To run the analysis, go to the "Kernel" menu in Jupyter Lab, and select "Restart Kernel and Run All Cells...".
+   In Jupyter Lab, navigate to and open the data_analysis_final_report.ipynb notebook (or the relevant notebook for your analysis).
+   To run the analysis, go to the "Kernel" menu in Jupyter Lab, and select "Restart Kernel and Run All Cells...".
 
 5. Clean Up
+   To stop the Docker container, go back to your terminal where you launched the container.
+   Press Ctrl + C to shut it down.
+   Remove the Container
 
-To stop the Docker container, go back to your terminal where you launched the container.
-Press Ctrl + C to shut it down.
-Remove the Container
-
-After shutting down the container, you can remove the stopped containers and associated resources by running:
+   After shutting down the container, you can remove the stopped containers and associated resources by running:
 
 ```shell
 docker compose rm
