@@ -64,7 +64,7 @@ docker compose up
    Copy this URL and paste it into your web browser to access Jupyter Lab.
    Run the Analysis Notebook
 
-   In Jupyter Lab, navigate to and open the data_analysis_final_report.ipynb notebook (or the relevant notebook for your analysis).
+   In Jupyter Lab, navigate to and open the heart_analyis_model.ipynb notebook (or the relevant notebook for your analysis).
    To run the analysis, go to the "Kernel" menu in Jupyter Lab, and select "Restart Kernel and Run All Cells...".
 
 5. Clean Up
