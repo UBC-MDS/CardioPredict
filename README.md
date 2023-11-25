@@ -21,13 +21,13 @@ Author: Joey Wu, He Ma, Sandy Gross and Doris Wang
 
 This project utilizes the Framingham Heart Study dataset to develop and evaluate two classification models, Logistic Regression and k-Nearest Neighbours (kNN), for coronary heart disease risk. The Framingham Heart Study is a comprehensive and long-term research project focused on understanding the factors contributing to cardiovascular health. Our model aims to utilize this dataset to identify the major risk factors to heart disease and effectively predict heart disease risk for individuals. The Logistic Regression model, optimized for recall, achieved a modest accuracy but excelled in identifying disease presence, albeit with many false positives. The kNN model, after addressing class imbalance through oversampling, showed improved recall but reduced accuracy. Both models underscore the need for further refinement in feature analysis and data preprocessing to enhance predictive accuracy, highlighting the potential for collaboration in healthcare to advance disease prediction methods.
 
-Final report: [heart_analyis_model.html](heart_analyis_model.html)
+Final report: [heart_analyis_model.html](https://ubc-mds.github.io/CardioPredict/heart_analyis_model.html)
 
 # Installation and Setup
 
 To get started with CardioPredict on your local machine, follow these steps:
 
-## Usage
+## Usage via Virtual Envrionment
 
 First time running the project, run the following from the root of this repository:
 
@@ -44,11 +44,51 @@ jupyter lab
 
 Open `heart_disease_analysis.ipynb` or `heart_analyis_model.ipynb` in Jupyter Lab and under the "Kernel" menu click "Restart Kernel and Run All Cells...".
 
+## Usage via Docker
+
+1. Install Docker
+2. Clone the GitHub Repository
+   Clone the CardioPredict project repository to your local machine using the following command in your terminal or command prompt:
+3. Running the Analysis
+   Navigate to the Project Directory
+   Use the command line to navigate to the root directory of the cloned CardioPredict project:
+   Run the following command to build and start the Docker container:
+
+```shell
+docker compose up
+```
+
+4. Access Jupyter Lab
+
+After running the above command, Docker will start Jupyter Lab.
+Look for a URL in the terminal output that starts with [http://127.0.0.1:8888/lab?token=]().
+Copy this URL and paste it into your web browser to access Jupyter Lab.
+Run the Analysis Notebook
+
+In Jupyter Lab, navigate to and open the data_analysis_final_report.ipynb notebook (or the relevant notebook for your analysis).
+To run the analysis, go to the "Kernel" menu in Jupyter Lab, and select "Restart Kernel and Run All Cells...".
+
+5. Clean Up
+
+To stop the Docker container, go back to your terminal where you launched the container.
+Press Ctrl + C to shut it down.
+Remove the Container
+
+After shutting down the container, you can remove the stopped containers and associated resources by running:
+
+```shell
+docker compose rm
+```
+
 ## Dependencies
 
 * `conda` (version 23.9.0 or higher)
 * `nb_conda_kernels` (version 2.3.1 or higher)
 * Python and packages listed in [environment.yaml](environment.yaml)
+
+## Running Tests with pytest
+
+To ensure the reliability and correctness of the functionalities in the CardioPredict project, we have provided comprehensive tests in the test/ directory. To run these tests, simply navigate to the root of the project in your command line interface and execute pytest. This command will automatically discover and run all test files located in the test/ directory that are designed to validate the code in the src/ directory.
 
 # Data
 
