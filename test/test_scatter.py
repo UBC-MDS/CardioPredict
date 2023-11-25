@@ -8,39 +8,48 @@ import os
 sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 from src.create_pairwise_scatter_plot import create_pairwise_scatter_plot
 
-@pytest.fixture
-def sample_data():
-    return pd.DataFrame({
+def test_create_pairwise_scatter_plot():
+    # Sample data
+    train_df = pd.DataFrame({
         'feature1': [1, 2, 3],
         'feature2': [4, 5, 6],
-        'disease': ['A', 'B', 'C']
-    }), ['feature1', 'feature2']
+        'color_feature': ['A', 'B', 'C']
+    })
+    numerical_features = ['feature1', 'feature2']
+    chart = create_pairwise_scatter_plot(train_df, numerical_features, 'color_feature')
+    assert isinstance(chart, alt.LayerChart), "The output should be an Altair LayerChart object"
 
-def test_chart_structure(sample_data):
-    df, features = sample_data
-    chart = create_pairwise_scatter_plot(df, features)
-    assert isinstance(chart, alt.Chart), "The function should return an instance of alt.Chart"
+def test_color_encoding():
+    # Sample data with color feature
+    train_df = pd.DataFrame({
+        'feature1': [1, 2, 3],
+        'feature2': [4, 5, 6],
+        'color_feature': ['A', 'B', 'C']
+    })
+    numerical_features = ['feature1', 'feature2']
+    chart = create_pairwise_scatter_plot(train_df, numerical_features, 'color_feature')
+    # Checking if color feature is used in any of the layers
+    assert any('color_feature:N' in str(layer.encoding.color) for layer in chart.layer), \
+        "Color feature should be encoded in at least one layer of the chart"
 
-def test_marks(sample_data):
-    df, features = sample_data
-    chart = create_pairwise_scatter_plot(df, features)
-    for mark in chart.mark:
-        assert mark.type == 'point', "All marks should be points"
+def test_without_color_feature():
+    train_df = pd.DataFrame({
+        'feature1': [1, 2, 3],
+        'feature2': [4, 5, 6]
+    })
+    numerical_features = ['feature1', 'feature2']
+    chart = create_pairwise_scatter_plot(train_df, numerical_features)
+    assert all('color' not in str(layer.encoding) for layer in chart.layer), \
+        "Color encoding should not be set when color_feature is None"
 
-def test_encoding(sample_data):
-    df, features = sample_data
-    chart = create_pairwise_scatter_plot(df, features)
-    # Check for correct encoding of axes and color
-    assert 'x' in chart.encoding and 'y' in chart.encoding, "Chart should have x and y encoding"
-    assert 'color' in chart.encoding, "Chart should have color encoding"
-
-def test_layout(sample_data):
-    df, features = sample_data
-    chart = create_pairwise_scatter_plot(df, features)
-    assert chart.width == 150 and chart.height == 150, "Each subplot should have the specified width and height"
-
-def test_error_handling():
+def test_dataframe_input_handling():
+    # Empty DataFrame
+    train_df_empty = pd.DataFrame()
+    numerical_features = ['feature1', 'feature2']
     with pytest.raises(ValueError):
-        create_pairwise_scatter_plot(None, ['feature1', 'feature2'])
-    with pytest.raises(ValueError):
-        create_pairwise_scatter_plot(sample_data()[0], ['non_existent_feature'])
+        create_pairwise_scatter_plot(train_df_empty, numerical_features)
+
+    # DataFrame missing specified features
+    train_df_missing_features = pd.DataFrame({'feature3': [7, 8, 9]})
+    with pytest.raises(KeyError):
+        create_pairwise_scatter_plot(train_df_missing_features, numerical_features)

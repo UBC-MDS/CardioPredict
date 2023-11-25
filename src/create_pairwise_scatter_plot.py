@@ -1,62 +1,40 @@
 import altair as alt
+import pandas as pd
 
 def create_pairwise_scatter_plot(train_df, numerical_features, color_feature=None):
     """
-    Creates a pairwise scatter plot matrix from the given DataFrame and numerical features.
-
-    Parameters:
-    ----------
-    train_df : pandas.DataFrame
-        A pandas DataFrame containing the data to be plotted.
-    numerical_features : list
-        A list of column names in train_df that are numerical features to be included in the scatter plot.
-    color_feature : str, optional
-        The name of the column in train_df to be used for color encoding. Defaults to None.
-
-    Returns:
-    -------
-    alt.Chart
-        An Altair Chart object representing the pairwise scatter plot matrix.
-
-    Example:
-    --------
-    >>> train_df = pd.DataFrame({
-            'feature1': [1, 2, 3],
-            'feature2': [4, 5, 6],
-            'disease': ['A', 'B', 'C']
-        })
-    >>> numerical_features = ['feature1', 'feature2']
-    >>> chart = create_pairwise_scatter_plot(train_df, numerical_features, 'disease')
-    >>> chart
+    Revised function to create a pairwise scatter plot matrix.
     """
-    # Validation
+
+    # Check if DataFrame is empty
+    if train_df.empty:
+        raise ValueError("Input DataFrame is empty")
+
+    # Check if all numerical features are in DataFrame
     missing_features = [f for f in numerical_features if f not in train_df.columns]
     if missing_features:
-        raise ValueError(f"Missing features in DataFrame: {missing_features}")
+        raise KeyError(f"Missing features in DataFrame: {missing_features}")
 
-    if color_feature and color_feature not in train_df.columns:
-        raise ValueError(f"Color feature '{color_feature}' not found in DataFrame")
+    # Base chart
+    base = alt.Chart().mark_point(opacity=0.5, size=10)
 
-    # Base chart with optional color encoding
-    base = alt.Chart(train_df).mark_point(opacity=0.5, size=10)
-    color_encoding = alt.Color(f'{color_feature}:N') if color_feature else None
+    # Adding color encoding if color_feature is provided and exists in DataFrame
+    if color_feature and color_feature in train_df.columns:
+        base = base.encode(color=alt.Color(f'{color_feature}:N'))
 
-    pairwise_chart = base.encode(
-        x=alt.X(alt.repeat("row"), type='quantitative', scale=alt.Scale(zero=False)),
-        y=alt.Y(alt.repeat("column"), type='quantitative', scale=alt.Scale(zero=False)),
-        color=color_encoding
-    ).properties(
-        width=150,
-        height=150
-    ).repeat(
-        row=numerical_features,
-        column=numerical_features
+    # Creating pairwise scatter plot
+    pairwise_chart = alt.layer(
+        *[base.encode(
+            x=alt.X(feat, type='quantitative'),
+            y=alt.Y(other_feat, type='quantitative')
+        ).properties(
+            width=150,
+            height=150
+        ) for feat in numerical_features for other_feat in numerical_features if feat != other_feat]
     ).resolve_scale(
         x='independent', 
         y='independent'
-    )
-
-    pairwise_chart = pairwise_chart.properties(
+    ).properties(
         title='Figure 4: Pairwise Scatter Plot Matrix'
     )
 
