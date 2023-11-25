@@ -13,47 +13,53 @@ def test_create_pairwise_scatter_plot():
     # Sample data
     train_df = pd.DataFrame({
         'feature1': [1, 2, 3],
-        'feature2': [4, 5, 6],
-        'color_feature': ['A', 'B', 'C']
+        'feature2': [4, 5, 6]
     })
     numerical_features = ['feature1', 'feature2']
-    chart = create_pairwise_scatter_plot(train_df, numerical_features, 'color_feature')
-    assert isinstance(chart, alt.LayerChart), "The output should be an Altair LayerChart object"
+    chart = create_pairwise_scatter_plot(train_df, numerical_features)
+    assert isinstance(chart, alt.RepeatChart), "The output should be an Altair RepeatChart object"
 
-#2. Test for Correct Color Encoding (Optional)
-def test_color_encoding():
-    # Sample data with color feature
+#2 Test for Correct Encoding of Features:
+def test_feature_encoding():
     train_df = pd.DataFrame({
         'feature1': [1, 2, 3],
         'feature2': [4, 5, 6],
-        'color_feature': ['A', 'B', 'C']
+        'feature3': [7, 8, 9]
     })
     numerical_features = ['feature1', 'feature2']
-    chart = create_pairwise_scatter_plot(train_df, numerical_features, 'color_feature')
-    # Checking if color feature is used in any of the layers
-    assert any('color_feature:N' in str(layer.encoding.color) for layer in chart.layer), \
-        "Color feature should be encoded in at least one layer of the chart"
+    chart = create_pairwise_scatter_plot(train_df, numerical_features)
 
-#3. Test for Absence of Color Encoding
-def test_without_color_feature():
+    encoded_features = set()
+    for enc in chart.spec.spec.encoding:
+        if enc in ['x', 'y']:
+            encoded_features.add(str(chart.spec.spec.encoding[enc].field))
+
+    assert encoded_features == {'feature1', 'feature2'}, \
+        "All specified features should be correctly encoded in the chart"
+
+#3.Test for Handling of Non-Numerical Features:
+def test_handling_non_numerical_features():
+    train_df = pd.DataFrame({
+        'feature1': [1, 2, 3],
+        'feature2': ['A', 'B', 'C']  # Non-numerical feature
+    })
+    numerical_features = ['feature1', 'feature2']
+    try:
+        chart = create_pairwise_scatter_plot(train_df, numerical_features)
+        assert True, "Function should handle non-numerical features gracefully"
+    except Exception as e:
+        assert False, f"Function should not raise an exception for non-numerical features: {e}"
+
+#4.Test for Correct Chart Properties
+def test_chart_properties():
     train_df = pd.DataFrame({
         'feature1': [1, 2, 3],
         'feature2': [4, 5, 6]
     })
     numerical_features = ['feature1', 'feature2']
     chart = create_pairwise_scatter_plot(train_df, numerical_features)
-    assert all('color' not in str(layer.encoding) for layer in chart.layer), \
-        "Color encoding should not be set when color_feature is None"
 
-#4. Test for Input Validation
-def test_dataframe_input_handling():
-    # Empty DataFrame
-    train_df_empty = pd.DataFrame()
-    numerical_features = ['feature1', 'feature2']
-    with pytest.raises(ValueError):
-        create_pairwise_scatter_plot(train_df_empty, numerical_features)
-
-    # DataFrame missing specified features
-    train_df_missing_features = pd.DataFrame({'feature3': [7, 8, 9]})
-    with pytest.raises(KeyError):
-        create_pairwise_scatter_plot(train_df_missing_features, numerical_features)
+    assert chart.properties['title'] == 'Figure 4: Pairwise Scatter Plot Matrix', "Chart should have the correct title"
+    for subchart in chart.spec:
+        assert subchart.properties['width'] == 150, "Subcharts should have the correct width"
+        assert subchart.properties['height'] == 150, "Subcharts should have the correct height"
