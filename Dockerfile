@@ -6,6 +6,7 @@ RUN  conda install -y \
     nb_conda_kernels=2.3.1 \
     pandas=2.1.1 \
     scikit-learn=1.3.1 \
+    numpy=1.26.0 \
     pytest=7.4.3 
     #vega_datasets= 0.9.0 \
     #vegafusion=1.4.3 \
