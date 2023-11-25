@@ -21,7 +21,7 @@ Author: Joey Wu, He Ma, Sandy Gross and Doris Wang
 
 This project utilizes the Framingham Heart Study dataset to develop and evaluate two classification models, Logistic Regression and k-Nearest Neighbours (kNN), for coronary heart disease risk. The Framingham Heart Study is a comprehensive and long-term research project focused on understanding the factors contributing to cardiovascular health. Our model aims to utilize this dataset to identify the major risk factors to heart disease and effectively predict heart disease risk for individuals. The Logistic Regression model, optimized for recall, achieved a modest accuracy but excelled in identifying disease presence, albeit with many false positives. The kNN model, after addressing class imbalance through oversampling, showed improved recall but reduced accuracy. Both models underscore the need for further refinement in feature analysis and data preprocessing to enhance predictive accuracy, highlighting the potential for collaboration in healthcare to advance disease prediction methods.
 
-Final report: [heart_analyis_model.html](https://ubc-mds.github.io/CardioPredict/heart_analyis_model.html)
+Final report: [heart_analyis_model.html](https://ubc-mds.github.io/CardioPredict/src/heart_analyis_model.html)
 
 # Installation and Setup
 
@@ -118,8 +118,6 @@ The project is structured as follows:
 ```bash
 ├── data
 │   └── framingham.csv
-├── heart_analyis_model.ipynb
-├── heart_analyis_model.html
 ├── tests
     └── test_logistic_regression_evaluation.py
     └── test_run_knn_analysis.py
@@ -127,6 +125,8 @@ The project is structured as follows:
     └── test_run_split.py
 ├── src
     └── create_pairwise_scatter_plot.py
+    └── heart_analyis_model.ipynb
+    └── heart_analyis_model.html
     └── logistic_regression_evaluation.py
     └── run_knn_analysis.py
     └── run_split.py
