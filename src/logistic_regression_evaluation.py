@@ -30,10 +30,11 @@ def evaluate_logistic_regression(X_train, y_train, X_test, y_test, numeric_featu
     - categorical_features (list): List of column names for categorical features.
 
     Returns:
-    - cm_df (pd.DataFrame): Confusion matrix  as a DataFrame.
-    - report_df (pd.DataFrame): Classification report  as a DataFrame.
+    - cm (numpy.ndarray): Confusion matrix as a 2D numpy array.
+    - report (str): Text summary of the precision, recall, F1 score, and support for each class.
     - gs (GridSearchCV): Fitted GridSearchCV object.
-    - gs_res (pd.DataFrame): DataFrame containing the cross-validation results from GridSearchCV.
+    - gs_res (pd.DataFrame): DataFrame containing the cross-validation results from GridSearchCV,
+      sorted by the rank of the test score.
     """
 
     # Create pipeline for numeric features
