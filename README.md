@@ -120,11 +120,23 @@ The project is structured as follows:
 │   └── framingham.csv
 ├── heart_analyis_model.ipynb
 ├── heart_analyis_model.html
+├── tests
+    └── test_logistic_regression_evaluation.py
+    └── test_run_knn_analysis.py
+    └── test_create_pairwise_scatter_plot.py
+    └── test_run_split.py
+├── src
+    └── create_pairwise_scatter_plot.py
+    └── logistic_regression_evaluation.py
+    └── run_knn_analysis.py
+    └── run_split.py
 ├── Img
 │   └── CardioPredict.png
 ├── CODE_OF_CONDUCT.md
 ├── CONTRIBUTING.md
-├── environment.yaml  
+├── environment.yaml
+├── Dockerfile
+├── docker-compose.yml
 ├── LICENSE
 └── README.md
 ```
