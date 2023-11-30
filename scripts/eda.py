@@ -109,6 +109,15 @@ def main(df, plot_to, data_to):
     )
     sex_chart.save(os.path.join(plot_to, "distribution_of_the_sex_variable.png"),
               scale_factor=2.0)
+    
+    #6. Boxplot of Specified Numerical Features 
+    plt.figure(figsize=(10, 6))
+    plt.boxplot([df['AGE'], df['FRW'], df['SBP'], df['DBP'], df['CHOL'], df['CIG']], 
+                labels=numerical_features)
+    plt.ylabel('Values')
+    plt.xlabel('Numerical Features')
+    plt.savefig(os.path.join(plot_to, "boxplot_of_specified_numerical_features"), dpi=600)
+
 
 if __name__ == '__main__':
     main()
