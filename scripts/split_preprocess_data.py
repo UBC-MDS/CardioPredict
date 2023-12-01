@@ -6,6 +6,8 @@ import click
 import os
 import pickle
 import pandas as pd
+import numpy as np
+from sklearn import set_config
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.impute import SimpleImputer
@@ -21,12 +23,15 @@ from sklearn.pipeline import make_pipeline
 @click.option('--preprocess-dir', required=True,
               type=click.Path(), help="The directory where the processed data and object should be saved.")
 @click.option('--preprocessor-to', type=str, help="Path to directory where the preprocessor object will be written to")
+@click.option('--seed', type=int, help="Random seed", default=123)
 
-def main(input_file, split_dir, preprocess_dir, preprocessor_to):
-    """
-    Reads the data from the raw data CSV, performs data cleaning/pre-processing, 
-    and saves the cleaned data to the specified directory.
-    """
+def main(input_file, split_dir, preprocess_dir, preprocessor_to, seed):
+    '''This script splits the raw data into train and test sets, 
+    and then preprocesses the data to be used in exploratory data analysis.
+    It also saves the preprocessor to be used in the model training script.'''
+    np.random.seed(seed)
+    set_config(transform_output="pandas")
+
     # Ensure output directory exists
     if not os.path.exists(split_dir):
         os.makedirs(split_dir)
@@ -35,7 +40,7 @@ def main(input_file, split_dir, preprocess_dir, preprocessor_to):
     df = pd.read_csv(input_file)
 
     # Split the data into train and test sets
-    train_df, test_df = train_test_split(df, test_size=0.2, random_state=123)
+    train_df, test_df = train_test_split(df, test_size=0.2)
 
     # Save the processed data
     train_df.to_csv(os.path.join(split_dir, 'train_data.csv'), index=False)
