@@ -4,8 +4,8 @@ import pickle
 from sklearn.neighbors import KNeighborsClassifier
 from imblearn.pipeline import make_pipeline as make_imb_pipeline
 from joblib import load
-from src.run_knn_analysis import run_knn_analysis
 import os
+import sys
 sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 from src.run_knn_analysis import run_knn_analysis
 from sklearn.model_selection import cross_validate
@@ -17,7 +17,7 @@ from sklearn.model_selection import cross_validate
 @click.option('--scoring', type=str, help="Path to scoring function", default=None)
 @click.option('--pipeline-to', type=str, help="Path to directory where the pipeline object will be written to")
 @click.option('--seed', type=int, help="Random seed", default=123)
-@click.option('--results-to', type=str, help="Path to directory where the result table will be written to")')
+@click.option('--results-to', type=str, help="Path to directory where the result table will be written to")
 
 def main(X_train, y_train, preprocessor, scoring, seed, pipeline_to, results_to):
     '''Finds the best k for KK, fits the disease classifier to the training data and saves the pipeline object and cv_results.'''
@@ -47,8 +47,8 @@ def main(X_train, y_train, preprocessor, scoring, seed, pipeline_to, results_to)
     #Fit and save the pipeline 
     pipe_knn.fit(X_train, y_train) 
     with open(os.path.join(pipeline_to, "pipe_knn.pickle"), 'wb') as f:
-    pickle.dump(pipe_knn, f)
+        pickle.dump(pipe_knn, f)
 
     if __name__ == '__main__':
-    main()
+        main()
 
