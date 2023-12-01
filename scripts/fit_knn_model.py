@@ -20,6 +20,7 @@ from sklearn.model_selection import cross_validate
 @click.option('--results-to', type=str, help="Path to directory where the result table will be written to")')
 
 def main(X_train, y_train, preprocessor, scoring, seed, pipeline_to, results_to):
+    '''Finds the best k for KK, fits the disease classifier to the training data and saves the pipeline object and cv_results.'''
 
     #import X_train and y_train
     X_train = pd.read_csv(X_train)
