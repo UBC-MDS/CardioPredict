@@ -2,9 +2,17 @@ import pandas as pd
 import numpy as np
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.model_selection import cross_validate
-from sklearn.pipeline import make_pipeline
+from imblearn.over_sampling import RandomOverSampler
+from imblearn.pipeline import make_pipeline as make_imb_pipeline
 
-def run_knn_analysis(X_train, y_train, param_grid={}, preprocessor=None):
+#class MyOverSampler(RandomOverSampler):
+  #  def __init__(self, sampling_strategy='auto', random_state=None, shrinkage=None):
+    #    super(RandomOverSampler, self).__init__(sampling_strategy='auto', random_state=None, shrinkage=None)
+    
+   # def fit_transform(self, X, y):
+   #     return self.fit_resample(X, y)
+
+def run_knn_analysis(X_train, y_train, param_grid={}, seed=123, preprocessor=None, scoring = None):
     """
     Perfrom Hyperparameter Optimization for k-Nearest Neighbors on the given data.
 
@@ -46,8 +54,9 @@ def run_knn_analysis(X_train, y_train, param_grid={}, preprocessor=None):
 
     for k in param_grid["n_neighbors"]:
         knn = KNeighborsClassifier(n_neighbors=k)
-        pipe = make_pipeline(preprocessor, knn)
-        scores = cross_validate(pipe, X_train, y_train, return_train_score=True)
+        #pipe = make_pipeline(preprocessor, knn)
+        pipe = make_imb_pipeline(RandomOverSampler(random_state = seed), preprocessor, knn)
+        scores = cross_validate(pipe, X_train, y_train, return_train_score=True, scoring = scoring)
 
         results_dict["n_neighbors"].append(k)
         results_dict["mean_cv_score"].append(np.mean(scores["test_score"]))
