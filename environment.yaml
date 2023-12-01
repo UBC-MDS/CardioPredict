@@ -19,7 +19,8 @@ dependencies:
   - vegafusion-jupyter=1.4.3
   - vegafusion-python-embed=1.4.3
   - vl-convert-python=1.1.0
-  - pip>=23.2.1
+  - click=8.1.7
+  - jupyter-book=0.15.1
   - pytest=7.4.3 
   - pip:
     - imblearn==0.0
