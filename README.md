@@ -10,8 +10,6 @@
 ![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/UBC-MDS/DSCI522-Group10?include_prereleases)
 ![GitHub last commit](https://img.shields.io/github/last-commit/UBC-MDS/DSCI522-Group10)
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/UBC-MDS/DSCI522-Group10)
-![GitHub issues](https://img.shields.io/github/issues/UBC-MDS/DSCI522-Group10/REPOSITORY.svg)
-![GitHub closed issues](https://img.shields.io/github/issues-closed/UBC-MDS/DSCI522-Group10/REPOSITORY.svg)
 ![contributors](https://img.shields.io/github/contributors/UBC-MDS/DSCI522-Group10)
 
 > CardioPredict harnesses the power of kNN Models to analyze key health indicators and provide a predictive model for assessing the risk of cardiovascular disease in individuals.
@@ -40,7 +38,7 @@ The journey of CardioPredict does not culminate with the current findings but ra
 
 Explore our repository to delve into the intricacies of our analysis, witness the evolution of our model, and partake in our quest to outwit cardiovascular disease.
 
-Final report: [heart_analyis_model.html](https://ubc-mds.github.io/CardioPredict/src/heart_analyis_model.html)
+Final report: [n](https://ubc-mds.github.io/CardioPredict/src/heart_analyis_model.html)eed a new link here
 
 # Installation and Setup
 
@@ -137,7 +135,7 @@ To ensure the reliability and correctness of the functionalities in the CardioPr
 
 # Data
 
-CardioPredict is based on data from the [Framingham Heart Study](https://clinicaltrials.gov/study/NCT00005121), an extensive cohort study that tracks health metrics related to heart disease. The full Framingham dataset, encompassing data from the first 32 clinical exams and event follow-up until 2018, is available upon request from the [National Institutes of Health](https://biolincc.nhlbi.nih.gov/studies/framcohort/). For this project, we utilized a refined subset obtained from [Paul Blanche&#39;s dataset](https://paulblanche.com/files/DataFramingham.html), which contains 1,363 records detailing key health indicators such as age, blood pressure, cholesterol, smoking habits, and occurrences of heart disease.
+CardioPredict is based on data from the renowned Framingham Heart Study (FHS), an extensive cohort study that tracks health metrics related to heart disease. The full Framingham dataset, encompassing data from the first 32 clinical exams and event follow-up until 2018, is available upon request from the [National Institutes of Health](https://biolincc.nhlbi.nih.gov/studies/framcohort/). For this project, we utilized a refined subset from Professor Paul Blanche ([dataset](https://paulblanche.com/files/DataFramingham.html)), which contains 1,363 records detailing key health indicators such as age, blood pressure, cholesterol, smoking habits, and occurrences of heart disease.
 
 The dataset includes variables such as age, gender, blood pressure, cholesterol levels, and smoking habits, analyzed to predict the likelihood of developing heart disease.
 
