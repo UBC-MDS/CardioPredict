@@ -1,6 +1,4 @@
-
 # Contributor Covenant Code of Conduct
-
 
 ## Our Pledge
 
@@ -41,7 +39,6 @@ Allegations of misconduct, including but not limited to harassment and abuse, sh
 
 Project maintainers are entrusted with upholding the Code of Conduct and will be held accountable should they fail to execute their duties responsibly. Violations by maintainers will be subject to actions, up to and including temporary suspension or permanent removal from their position, as decided by the project's senior
 
-
 ## Attribution
 
-This Code of Conduct is copied from the  [Python Community CoC](https://www.python.org/psf/conduct/) which was adapted from the [Contributor Covenant][homepage].
+This Code of Conduct is copied from the  [Python Community CoC](https://www.python.org/psf/conduct/) which was adapted from the [Contributor Covenant](https://www.contributor-covenant.org/version/1/4/code-of-conduct/), version 1.4.
