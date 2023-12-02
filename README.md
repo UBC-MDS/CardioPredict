@@ -25,7 +25,6 @@ Wang, Doris - UBC-MDS
 
 Wu, Joey - UBC, MDS
 
-
 # Project Overview
 
 This project utilizes the Framingham Heart Study dataset to develop and evaluate two classification models, Logistic Regression and k-Nearest Neighbours (kNN), for coronary heart disease risk. The Framingham Heart Study is a comprehensive and long-term research project focused on understanding the factors contributing to cardiovascular health. Our model aims to utilize this dataset to identify the major risk factors to heart disease and effectively predict heart disease risk for individuals. The Logistic Regression model, optimized for recall, achieved a modest accuracy but excelled in identifying disease presence, albeit with many false positives. The kNN model, after addressing class imbalance through oversampling, showed improved recall but reduced accuracy. Both models underscore the need for further refinement in feature analysis and data preprocessing to enhance predictive accuracy, highlighting the potential for collaboration in healthcare to advance disease prediction methods.
@@ -112,8 +111,10 @@ docker compose up
    	--figure-results-to=results/figures
 
    # visualize model performance
-
-
+   python scripts/knn_eval.py \
+   	--x_test=data/processed/X_test.csv \
+   	--y_test=data/processed/y_test.csv \
+   	--trained_knn_model=results/models/imb_knn_pipeline.pickle --results-dir=results
 
    # build HTML report and copy build to docs folder
    jupyter-book build report

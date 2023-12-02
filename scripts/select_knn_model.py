@@ -46,7 +46,7 @@ def main(x_train, y_train, preprocessor, table_results_to, figure_results_to, se
     }
     
     #Search the best k for knn
-    param_grid = {"n_neighbors": np.arange(1, 20, 1)}
+    param_grid = {"n_neighbors": np.arange(1, 40, 2)}
     df_cv_knn = run_knn_analysis(x_train, y_train, param_grid, 
                                  preprocessor=preprocessor, scoring=scoring_metrics)
 
