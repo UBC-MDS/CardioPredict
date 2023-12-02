@@ -32,6 +32,9 @@ def main(x_test, y_test, trained_knn_model, results_dir):
 
     # Compute confusion matrix
     cm = confusion_matrix(y_test, y_pred)
+    cm_df = pd.DataFrame(cm)
+    cm_df.to_csv(os.path.join(tables_path, 'knn_test_confusion_matrix.csv'))
+
     disp = ConfusionMatrixDisplay(confusion_matrix=cm)
     fig, ax = plt.subplots(figsize=(10,10))
     disp.plot(ax=ax)
@@ -42,6 +45,7 @@ def main(x_test, y_test, trained_knn_model, results_dir):
     report_df = pd.DataFrame(report).transpose()
     report_df.to_csv(os.path.join(tables_path, 'knn_test_data_classification_report.csv'))
 
+    print('Confusion mx and classification report saved！')
 
 if __name__ == '__main__':
     main()
