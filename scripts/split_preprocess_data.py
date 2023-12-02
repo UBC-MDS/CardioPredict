@@ -58,7 +58,7 @@ def main(input_file, split_dir, preprocess_dir, preprocessor_to, seed):
     X_test.to_csv(os.path.join(split_dir, 'X_test.csv'), index=False)
   
     y_train.to_csv(os.path.join(split_dir, 'y_train.csv'), index=False)
-    y_test.to_csv(os.path.join(split_dir, 'x_test.csv'), index=False)
+    y_test.to_csv(os.path.join(split_dir, 'y_test.csv'), index=False)
 
     print(f"Processed data saved to {split_dir}")
 
