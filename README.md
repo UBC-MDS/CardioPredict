@@ -3,7 +3,7 @@
     <figcaption>Created by DALL-E</figcaption>
 </figure>
 
-# CardioPredict: Assessing Heart Disease Risk
+# CardioPredict: Assessing Cardiovascular Disease Risk
 
 ![Python](https://img.shields.io/badge/lanaguge-Python-blue.svg)
 ![codesize](https://img.shields.io/github/languages/code-size/UBC-MDS/DSCI522-Group10)
@@ -13,7 +13,7 @@
 ![GitHub](https://img.shields.io/github/license/UBC-MDS/DSCI522-Group10)
 ![contributors](https://img.shields.io/github/contributors/UBC-MDS/DSCI522-Group10)
 
-> CardioPredict harnesses the power of logistic regression and k-Nearest Neighbours to analyze key health indicators and provide a predictive model for assessing the risk of coronary heart disease in individuals.
+> CardioPredict harnesses the power of kNN Models to analyze key health indicators and provide a predictive model for assessing the risk of cardiovascular disease in individuals.
 
 Authors: (listed alphabetically)
 
@@ -25,9 +25,20 @@ Wang, Doris - UBC-MDS
 
 Wu, Joey - UBC, MDS
 
-# Project Overview
 
-This project utilizes the Framingham Heart Study dataset to develop and evaluate two classification models, Logistic Regression and k-Nearest Neighbours (kNN), for coronary heart disease risk. The Framingham Heart Study is a comprehensive and long-term research project focused on understanding the factors contributing to cardiovascular health. Our model aims to utilize this dataset to identify the major risk factors to heart disease and effectively predict heart disease risk for individuals. The Logistic Regression model, optimized for recall, achieved a modest accuracy but excelled in identifying disease presence, albeit with many false positives. The kNN model, after addressing class imbalance through oversampling, showed improved recall but reduced accuracy. Both models underscore the need for further refinement in feature analysis and data preprocessing to enhance predictive accuracy, highlighting the potential for collaboration in healthcare to advance disease prediction methods.
+# Overview
+
+Cardiovascular disease (CVD) stands as one of the paramount health challenges of our time, being the principal cause of mortality worldwide. The capacity to accurately forecast the onset of CVD is a cornerstone in the endeavor to enhance patient outcomes through timely and effective medical interventions. Our project, CardioPredict, harnesses the power of machine learning to forge a path toward this goal.
+
+Drawing on data from the illustrious Framingham Heart Study (FHS), CardioPredict integrates a spectrum of clinical, demographic, and lifestyle factors to construct a k-Nearest Neighbors (kNN) predictive model. The dataset is a rich tapestry of patient histories, replete with variables that are pivotal in CVD risk assessment.
+
+The crux of our methodology is the meticulous tuning of the kNN algorithm's hyperparameters, ensuring optimal model performance. This is further bolstered by an oversampling technique designed to amplify the model's sensitivity to minority classes, thus addressing inherent class imbalances that often skew predictive outcomes.
+
+While our model achieves moderate accuracy and recall, it brings to light the influential role of both well-known and less-recognized risk factors. Particularly, it identifies cholesterol levels and smoking habits as key predictors of CVD risk, adding to the traditional emphasis on age and blood pressure metrics. These findings are a clarion call for deeper explorations into the multifaceted causes of CVD, with the ultimate aim of honing the precision of our predictive tools.
+
+The journey of CardioPredict does not culminate with the current findings but rather opens new avenues for exploration in the landscape of medical diagnostics. We invite collaborators, researchers, and healthcare professionals to engage with our findings, critique our approach, and contribute to the ongoing enhancement of our model. Together, we can turn the tide against cardiovascular disease and save lives through the power of predictive analytics.
+
+Explore our repository to delve into the intricacies of our analysis, witness the evolution of our model, and partake in our quest to outwit cardiovascular disease.
 
 Final report: [heart_analyis_model.html](https://ubc-mds.github.io/CardioPredict/src/heart_analyis_model.html)
 
@@ -92,17 +103,17 @@ docker compose up
    # perform eda and save plots
    python scripts/eda.py \
    	--df=data/processed/train_df.csv
-   	--plot-to=results/figures
-   	--data-to=data/processed \
+   	--plot-to=results/figures \
+   	--data-to=data/processed
 
-   # train model, create visualize tuning, and save plot and model
+   # select model, create visualize tuning, and save plots
    python scripts/select_knn_model.py \
    	--x_train=data/processed/X_train.csv \
    	--y_train=data/processed/y_train.csv \
    	--preprocessor=results/models/preprocessor.pickle  \
    	--table-results-to=results/tables --figure-results-to=results/figures
 
-   # evaluate model on test data and save results
+   # train model and save results
    python scripts/fit_knn_model.py \
    	--x_train=data/processed/X_train.csv \
    	--y_train=data/processed/y_train.csv \
@@ -110,7 +121,7 @@ docker compose up
    	--pipeline-to=results/models \
    	--figure-results-to=results/figures
 
-   # visualize model performance
+   # evaluate model on test data and visualize results
    python scripts/knn_eval.py \
    	--x_test=data/processed/X_test.csv \
    	--y_test=data/processed/y_test.csv \
@@ -157,36 +168,6 @@ The dataset includes variables such as age, gender, blood pressure, cholesterol 
 | CHOL     | cholesterol at baseline mg/100ml (96-430)                              |
 | CIG      | cigarettes per day at baseline (0-60)                                  |
 | disease  | 1 if coronary heart disease occurred during the follow-up, 0 otherwise |
-
-# Code structure (revise)
-
-The project is structured as follows:
-
-```bash
-├── data
-│   └── framingham.csv
-├── tests
-    └── test_logistic_regression_evaluation.py
-    └── test_run_knn_analysis.py
-    └── test_create_pairwise_scatter_plot.py
-    └── test_run_split.py
-├── src
-    └── create_pairwise_scatter_plot.py
-    └── heart_analyis_model.ipynb
-    └── heart_analyis_model.html
-    └── logistic_regression_evaluation.py
-    └── run_knn_analysis.py
-    └── run_split.py
-├── Img
-│   └── CardioPredict.png
-├── CODE_OF_CONDUCT.md
-├── CONTRIBUTING.md
-├── environment.yaml
-├── Dockerfile
-├── docker-compose.yml
-├── LICENSE
-└── README.md
-```
 
 # Results and Evaluation (rewrite)
 
