@@ -6,6 +6,8 @@ from imblearn.pipeline import make_pipeline as make_imb_pipeline
 from joblib import load
 import os
 import sys
+import numpy as np
+
 sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 from src.run_knn_analysis import run_knn_analysis
 from sklearn.model_selection import cross_validate
@@ -45,10 +47,10 @@ def main(X_train, y_train, preprocessor, scoring, seed, pipeline_to, results_to)
     result_knn.to_csv(os.path.join(results_to, "result_knn.csv"), index=False)
    
     #Fit and save the pipeline 
-    pipe_knn.fit(X_train, y_train) 
+    pipe_knn_fit = pipe_knn.fit(X_train, y_train) 
     with open(os.path.join(pipeline_to, "pipe_knn.pickle"), 'wb') as f:
-        pickle.dump(pipe_knn, f)
+        pickle.dump(pipe_knn_fit, f)
 
-    if __name__ == '__main__':
-        main()
+if __name__ == '__main__':
+   main()
 
