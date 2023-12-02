@@ -45,3 +45,4 @@ def main(x_test, y_test, trained_knn_model, results_dir):
 
 if __name__ == '__main__':
     main()
+# python scripts/knn_eval.py --x_test=data/processed/X_test.csv --y_test=data/processed/y_test.csv --trained_knn_model=results/models/imb_knn_pipeline.pickle --results-dir=results
