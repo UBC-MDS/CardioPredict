@@ -15,7 +15,16 @@
 
 > CardioPredict harnesses the power of logistic regression and k-Nearest Neighbours to analyze key health indicators and provide a predictive model for assessing the risk of coronary heart disease in individuals.
 
-Author: Joey Wu, He Ma, Sandy Gross and Doris Wang
+Authors: (listed alphabetically)
+
+Ma, He - UBC-MDS
+
+Gross, Sandy - UBC-MDS
+
+Wang, Doris - UBC-MDS
+
+Wu, Joey - UBC, MDS
+
 
 # Project Overview
 
@@ -66,8 +75,51 @@ docker compose up
 
    In Jupyter Lab, navigate to and open the heart_analyis_model.ipynb notebook (or the relevant notebook for your analysis).
    To run the analysis, go to the "Kernel" menu in Jupyter Lab, and select "Restart Kernel and Run All Cells...".
+5. To reproduce the analysis, run the following commands in the terminal in the project root:
 
-5. Clean Up
+   ```
+   # download, split and preprocess data
+   python scripts/download_data.py \
+   	--url "https://paulblanche.com/files/framingham.csv" \
+   	--filepath "data/raw/framingham.csv"
+
+   # split data into train and test sets, preprocess data, and save preprocessor
+   python scripts/split_preprocess_data.py \
+   	--input-file data/raw/framingham.csv \
+   	--split-dir data/processed/ \
+   	--preprocess-dir data/processed/ \
+   	--preprocessor-to results/models/
+
+   # perform eda and save plots
+   python scripts/eda.py \
+   	--df=data/processed/train_df.csv
+   	--plot-to=results/figures
+   	--data-to=data/processed \
+
+   # train model, create visualize tuning, and save plot and model
+   python scripts/select_knn_model.py \
+   	--x_train=data/processed/X_train.csv \
+   	--y_train=data/processed/y_train.csv \
+   	--preprocessor=results/models/preprocessor.pickle  \
+   	--table-results-to=results/tables --figure-results-to=results/figures
+
+   # evaluate model on test data and save results
+   python scripts/fit_knn_model.py \
+   	--x_train=data/processed/X_train.csv \
+   	--y_train=data/processed/y_train.csv \
+   	--preprocessor=results/models/preprocessor.pickle \
+   	--pipeline-to=results/models \
+   	--figure-results-to=results/figures
+
+   # visualize model performance
+
+
+
+   # build HTML report and copy build to docs folder
+   jupyter-book build report
+   cp -r report/_build/html/* docs
+   ```
+6. Clean Up
    To stop the Docker container, go back to your terminal where you launched the container.
    Press Ctrl + C to shut it down.
    Remove the Container
@@ -86,17 +138,11 @@ docker compose rm
 
 ## Running Tests with pytest
 
-To ensure the reliability and correctness of the functionalities in the CardioPredict project, we have provided comprehensive tests in the test/ directory. To run these tests, simply navigate to the root of the project in your command line interface and execute pytest. This command will automatically discover and run all test files located in the test/ directory that are designed to validate the code in the src/ directory.
+To ensure the reliability and correctness of the functionalities in the CardioPredict project, we have provided comprehensive tests in the [test/](https://github.com/UBC-MDS/CardioPredict/tree/main/tests) directory. To run these tests, simply navigate to the root of the project in your command line interface and execute `pytest`. This command will automatically discover and run all test files located in the [test/ ](https://github.com/UBC-MDS/CardioPredict/tree/main/tests)directory that are designed to validate the code in the [src/](https://github.com/UBC-MDS/CardioPredict/tree/main/src) directory.
 
 # Data
 
-CardioPredict is based on data from the [Framingham Heart Study](https://clinicaltrials.gov/study/NCT00005121), an extensive cohort study that tracks health metrics related to heart disease. The full Framingham dataset, encompassing data from the first 32 clinical exams and event follow-up until 2018, is available upon request from the [National Institutes of Health](https://biolincc.nhlbi.nih.gov/studies/framcohort/).
-
-## Source Data
-
-For this project, we utilized a refined subset obtained from [Paul Blanche\'s dataset](https://paulblanche.com/files/DataFramingham.html), which contains 1,363 records detailing key health indicators such as age, blood pressure, cholesterol, smoking habits, and occurrences of heart disease.
-
-## Data Overview
+CardioPredict is based on data from the [Framingham Heart Study](https://clinicaltrials.gov/study/NCT00005121), an extensive cohort study that tracks health metrics related to heart disease. The full Framingham dataset, encompassing data from the first 32 clinical exams and event follow-up until 2018, is available upon request from the [National Institutes of Health](https://biolincc.nhlbi.nih.gov/studies/framcohort/). For this project, we utilized a refined subset obtained from [Paul Blanche&#39;s dataset](https://paulblanche.com/files/DataFramingham.html), which contains 1,363 records detailing key health indicators such as age, blood pressure, cholesterol, smoking habits, and occurrences of heart disease.
 
 The dataset includes variables such as age, gender, blood pressure, cholesterol levels, and smoking habits, analyzed to predict the likelihood of developing heart disease.
 
@@ -111,7 +157,7 @@ The dataset includes variables such as age, gender, blood pressure, cholesterol 
 | CIG      | cigarettes per day at baseline (0-60)                                  |
 | disease  | 1 if coronary heart disease occurred during the follow-up, 0 otherwise |
 
-# Code structure
+# Code structure (revise)
 
 The project is structured as follows:
 
@@ -141,15 +187,15 @@ The project is structured as follows:
 └── README.md
 ```
 
-# Results and Evaluation
+# Results and Evaluation (rewrite)
 
 The Logistic Regression model achieved an accuracy of 55.3% and a recall of 84%, effectively identifying disease presence but also resulting in many false positives. The class-balanced kNN model showed a recall of 51.7% and an accuracy of 63.7%. The model's performance metrics and graphs are included in the final report.
 
-# Future Work
+# Future Work (rewrite)
 
 Future extensions of this project could include exploring more complex models, incorporating more variables, and applying the model to other datasets to validate its robustness.
 
-# References
+# References (use Mendeley to recreate)
 
 - Framingham Heart Study. 2023. [https://www.framinghamheartstudy.org/](https://www.framinghamheartstudy.org/)
 - National Heart, Lung, and Blood Institute. 2021. Framingham Heart Study Longitudinal Data Documentation for Teaching Dataset. [https://biolincc.nhlbi.nih.gov/media/teachingstudies/FHS_Teaching_Longitudinal_Data_Documentation_2021a.pdf](https://biolincc.nhlbi.nih.gov/media/teachingstudies/FHS_Teaching_Longitudinal_Data_Documentation_2021a.pdf)
