@@ -85,7 +85,7 @@ docker compose up
 
    # perform eda and save plots
    python scripts/eda.py \
-   	--df=data/processed/train_df.csv
+   	--df=data/processed/train_df.csv \
    	--plot-to=results/figures \
    	--data-to=data/processed
 
@@ -129,7 +129,7 @@ docker compose rm
 
 * `conda` (version 23.9.0 or higher)
 * `nb_conda_kernels` (version 2.3.1 or higher)
-* Python and packages listed in [environment.yaml](environment.yaml)
+* Python and packages listed in [environment.yaml](https://github.com/UBC-MDS/CardioPredict/blob/main/environment.yaml)
 
 ## Running Tests with pytest
 
