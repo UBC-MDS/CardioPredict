@@ -5,12 +5,11 @@
 
 # CardioPredict: Assessing Cardiovascular Disease Risk
 
-![Python](https://img.shields.io/badge/lanaguge-Python-blue.svg)
+![Python](https://img.shields.io/badge/language-Python-blue.svg)
 ![codesize](https://img.shields.io/github/languages/code-size/UBC-MDS/DSCI522-Group10)
 ![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/UBC-MDS/DSCI522-Group10?include_prereleases)
 ![GitHub last commit](https://img.shields.io/github/last-commit/UBC-MDS/DSCI522-Group10)
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/UBC-MDS/DSCI522-Group10)
-![GitHub](https://img.shields.io/github/license/UBC-MDS/DSCI522-Group10)
 ![contributors](https://img.shields.io/github/contributors/UBC-MDS/DSCI522-Group10)
 
 > CardioPredict harnesses the power of kNN Models to analyze key health indicators and provide a predictive model for assessing the risk of cardiovascular disease in individuals.
@@ -24,7 +23,6 @@ Gross, Sandy - UBC-MDS
 Wang, Doris - UBC-MDS
 
 Wu, Joey - UBC, MDS
-
 
 # Overview
 
@@ -40,28 +38,11 @@ The journey of CardioPredict does not culminate with the current findings but ra
 
 Explore our repository to delve into the intricacies of our analysis, witness the evolution of our model, and partake in our quest to outwit cardiovascular disease.
 
-Final report: [heart_analyis_model.html](https://ubc-mds.github.io/CardioPredict/src/heart_analyis_model.html)
+Final report: [n](https://ubc-mds.github.io/CardioPredict/src/heart_analyis_model.html)eed a new link here
 
 # Installation and Setup
 
 To get started with CardioPredict on your local machine, follow these steps:
-
-## Usage via Virtual Envrionment
-
-First time running the project, run the following from the root of this repository:
-
-```shell
-conda env create --file environment.yaml
-```
-
-To run the analysis, run the following from the root of this repository:
-
-```shell
-conda activate 522-project-disease
-jupyter lab 
-```
-
-Open `heart_disease_analysis.ipynb` or `heart_analyis_model.ipynb` in Jupyter Lab and under the "Kernel" menu click "Restart Kernel and Run All Cells...".
 
 ## Usage via Docker
 
@@ -154,7 +135,7 @@ To ensure the reliability and correctness of the functionalities in the CardioPr
 
 # Data
 
-CardioPredict is based on data from the [Framingham Heart Study](https://clinicaltrials.gov/study/NCT00005121), an extensive cohort study that tracks health metrics related to heart disease. The full Framingham dataset, encompassing data from the first 32 clinical exams and event follow-up until 2018, is available upon request from the [National Institutes of Health](https://biolincc.nhlbi.nih.gov/studies/framcohort/). For this project, we utilized a refined subset obtained from [Paul Blanche&#39;s dataset](https://paulblanche.com/files/DataFramingham.html), which contains 1,363 records detailing key health indicators such as age, blood pressure, cholesterol, smoking habits, and occurrences of heart disease.
+CardioPredict is based on data from the renowned Framingham Heart Study (FHS), an extensive cohort study that tracks health metrics related to heart disease. The full Framingham dataset, encompassing data from the first 32 clinical exams and event follow-up until 2018, is available upon request from the [National Institutes of Health](https://biolincc.nhlbi.nih.gov/studies/framcohort/). For this project, we utilized a refined subset from Professor Paul Blanche ([dataset](https://paulblanche.com/files/DataFramingham.html)), which contains 1,363 records detailing key health indicators such as age, blood pressure, cholesterol, smoking habits, and occurrences of heart disease.
 
 The dataset includes variables such as age, gender, blood pressure, cholesterol levels, and smoking habits, analyzed to predict the likelihood of developing heart disease.
 
@@ -177,15 +158,48 @@ The Logistic Regression model achieved an accuracy of 55.3% and a recall of 84%,
 
 Future extensions of this project could include exploring more complex models, incorporating more variables, and applying the model to other datasets to validate its robustness.
 
-# References (use Mendeley to recreate)
+# References
 
-- Framingham Heart Study. 2023. [https://www.framinghamheartstudy.org/](https://www.framinghamheartstudy.org/)
-- National Heart, Lung, and Blood Institute. 2021. Framingham Heart Study Longitudinal Data Documentation for Teaching Dataset. [https://biolincc.nhlbi.nih.gov/media/teachingstudies/FHS_Teaching_Longitudinal_Data_Documentation_2021a.pdf](https://biolincc.nhlbi.nih.gov/media/teachingstudies/FHS_Teaching_Longitudinal_Data_Documentation_2021a.pdf)
-- Andersson C, Johnson A D, Benjamin E J, et al. 2019. 70-year legacy of the Framingham Heart Study. Nature Reviews Cardiology, 2019, 16(11): 687-698. [https://www.nature.com/articles/s41569-019-0202-5](https://www.nature.com/articles/s41569-019-0202-5)
-- World Heart Report 2023. 2023. World heart report 2023 confronting the world's number one killer.[https://world-heart-federation.org/wp-content/uploads/World-Heart-Report-2023.pdf](https://world-heart-federation.org/wp-content/uploads/World-Heart-Report-2023.pdf)
-- World Heart Federation. 2023. Deaths from Cardiovascular Disease Surged 60% Globally Over the Last 30 Years: Report.[https://world-heart-federation.org/news/deaths-from-cardiovascular-disease-surged-60-globally-over-the-last-30-years-report/](https://world-heart-federation.org/news/deaths-from-cardiovascular-disease-surged-60-globally-over-the-last-30-years-report/)
-- World Health Organization. 2023. Cardiovascular diseases (CVDs). [https://www.who.int/news-room/fact-sheets/detail/cardiovascular-diseases-(cvds)](https://www.who.int/news-room/fact-sheets/detail/cardiovascular-diseases-(cvds))
+li, M. M., Paul, B. K., Ahmed, K., Bui, F. M., Quinn, J. M. W., & Moni, M. A. (2021). Heart disease prediction using supervised machine learning algorithms: Performance analysis and comparison.  *Computers in Biology and Medicine* ,  *136* , 104672. https://doi.org/10.1016/J.COMPBIOMED.2021.104672
+
+Andersson, C., Johnson, A. D., Benjamin, E. J., Levy, D., & Vasan, R. S. (2019). 70-year legacy of the Framingham Heart Study.  *Nature Reviews Cardiology 2019 16:11* ,  *16* (11), 687–698. [https://doi.org/10.1038/s41569-019-0202-5](https://doi.org/10.1038/s41569-019-0202-5)
+
+Andersson, C., Nayor, M., Tsao, C. W., Levy, D., & Vasan, R. S. (2021). Framingham Heart Study: JACC Focus Seminar, 1/8.  *Journal of the American College of Cardiology* ,  *77* (21), 2680–2692. [https://doi.org/10.1016/J.JACC.2021.01.059](https://doi.org/10.1016/J.JACC.2021.01.059)
+
+Barden, A. E., Huang, R. C., Beilin, L. J., Rauschert, S., Tsai, I. J., Oddy, W. H., & Mori, T. A. (2022). Identifying young adults at high risk of cardiometabolic disease using cluster analysis and the Framingham 30-yr risk score.  *Nutrition, Metabolism and Cardiovascular Diseases* ,  *32* (2), 429–435. [https://doi.org/10.1016/J.NUMECD.2021.10.006](https://doi.org/10.1016/J.NUMECD.2021.10.006)
+
+ *BioLINCC: Framingham Heart Study-Cohort (FHS-Cohort)* . (n.d.). Retrieved November 29, 2023, from https://biolincc.nhlbi.nih.gov/studies/framcohort/
+
+ *Cardiovascular diseases (CVDs)* . (n.d.). Retrieved November 29, 2023, from [https://www.who.int/news-room/fact-sheets/detail/cardiovascular-diseases-(cvds)](https://www.who.int/news-room/fact-sheets/detail/cardiovascular-diseases-(cvds))
+
+Cherif, W. (2018). Optimization of K-NN algorithm by clustering and reliability coefficients: application to breast-cancer diagnosis.  *Procedia Computer Science* ,  *127* , 293–299. [https://doi.org/10.1016/J.PROCS.2018.01.125](https://doi.org/10.1016/J.PROCS.2018.01.125)
+
+DAWBER, T. R., MEADORS, G. F., & MOORE, F. E. (1951). Epidemiological Approaches to Heart Disease: The Framingham Study.  *American Journal of Public Health and the Nations Health* ,  *41* (3), 279. [https://doi.org/10.2105/AJPH.41.3.279](https://doi.org/10.2105/AJPH.41.3.279)
+
+DAWBER, T. R., MOORE, F. E., & MANN, G. V. (1957). Coronary heart disease in the Framingham study.  *American Journal of Public Health and the Nation’s Health* ,  *47* (4 Pt 2), 4–24. [https://doi.org/10.2105/AJPH.47.4_PT_2.4](https://doi.org/10.2105/AJPH.47.4_PT_2.4)
+
+ *Deaths from cardiovascular disease surged 60% globally over the last 30 years: Report - World Heart Federation* .
+(n.d.). Retrieved November 29, 2023, from [https://world-heart-federation.org/news/deaths-from-cardiovascular-disease-surged-60-globally-over-the-last-30-years-report/](https://world-heart-federation.org/news/deaths-from-cardiovascular-disease-surged-60-globally-over-the-last-30-years-report/)
+
+ *Framingham data* . (n.d.). Retrieved November 29, 2023, from https://paulblanche.com/files/DataFramingham.html
+
+jabbar, M. A., Deekshatulu, B. L., & Chandra, P. (2013). Classification of Heart Disease Using K-Nearest Neighbor and Genetic Algorithm.  *Procedia Technology* ,  *10* , 85–94. [https://doi.org/10.1016/J.PROTCY.2013.12.340](https://doi.org/10.1016/J.PROTCY.2013.12.340)
+
+Lahmiri, S. (2023). Integrating convolutional neural networks, kNN, and Bayesian optimization for efficient diagnosis of Alzheimer’s disease in magnetic resonance images.  *Biomedical Signal Processing and Control* ,  *80* , 104375. https://doi.org/10.1016/J.BSPC.2022.104375
+
+ *National Heart, Lung, and Blood Institute. 2021. Framingham Heart Study Longitudinal Data Documentation for Teaching Dataset* .
+(n.d.). Retrieved November 29, 2023, from https://biolincc.nhlbi.nih.gov/media/teachingstudies/FHS_Teaching_Longitudinal_Data_Documentation_2021a.pdf
+
+Pedregosa, F., Varoquaux, G., Gramfort, A., Michel, V., Thirion, B., Grisel, O., Blondel, M., Prettenhofer, P., Weiss, R., Dubourg, V., Vanderplas, J., Passos, A., Cournapeau, D., Brucher, M., Perrot, M., & Duchesnay, É. (2012). Scikit-learn: Machine Learning in Python.  *Journal of Machine Learning Research* ,  *12* , 2825–2830. [https://arxiv.org/abs/1201.0490v4](https://arxiv.org/abs/1201.0490v4)
+
+ *Study Details | Framingham Heart Study | ClinicalTrials.gov* . (n.d.). Retrieved November 29, 2023, from [https://clinicaltrials.gov/study/NCT00005121](https://clinicaltrials.gov/study/NCT00005121)
+
+Sun, X., Ho, J. E., Gao, H., Evangelou, E., Yao, C., Huan, T., Hwang, S. J., Courchesne, P., Larson, M. G., Levy, D., Ma, J., & Liu, C. (2021). Associations of Alcohol Consumption with Cardiovascular Disease-Related Proteomic Biomarkers: The Framingham Heart Study.  *The Journal of Nutrition* ,  *151* (9), 2574–2582. [https://doi.org/10.1093/JN/NXAB186](https://doi.org/10.1093/JN/NXAB186)
+
+Tsao, C. W., & Vasan, R. S. (2015). The Framingham Heart Study: past, present and future.  *International Journal of Epidemiology* ,  *44* (6), 1763–1766. [https://doi.org/10.1093/IJE/DYV336](https://doi.org/10.1093/IJE/DYV336)
+
+ *World Heart Report 2023: Full Report - World Heart Federation* . (n.d.). Retrieved November 29, 2023, from [https://world-heart-federation.org/resource/world-heart-report-2023/](https://world-heart-federation.org/resource/world-heart-report-2023/)
 
 # License
 
-This project is released under [MIT License](https://opensource.org/license/mit/).
+The CadioPredict report contained herein are licensed under the [Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License](https://creativecommons.org/licenses/by-nc-sa/4.0/). See [the license file](https://github.com/UBC-MDS/CardioPredict/blob/main/LICENSE) for more information. . If re-using/re-mixing please provide attribution and link to this webpage. The software code contained within this repository is licensed under the MIT license. See [the license file](https://github.com/UBC-MDS/CardioPredict/blob/main/LICENSE) for more information.
