@@ -16,9 +16,9 @@
 
 Authors: (listed alphabetically)
 
-Ma, He - UBC-MDS
-
 Gross, Sandy - UBC-MDS
+
+Ma, He - UBC-MDS
 
 Wang, Doris - UBC-MDS
 
