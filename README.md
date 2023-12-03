@@ -22,7 +22,7 @@ Gross, Sandy - UBC-MDS
 
 Wang, Doris - UBC-MDS
 
-Wu, Joey - UBC, MDS
+Wu, Joey - UBC-MDS
 
 # Overview
 
@@ -32,13 +32,15 @@ Drawing on data from the illustrious Framingham Heart Study (FHS), CardioPredict
 
 The crux of our methodology is the meticulous tuning of the kNN algorithm's hyperparameters, ensuring optimal model performance. This is further bolstered by an oversampling technique designed to amplify the model's sensitivity to minority classes, thus addressing inherent class imbalances that often skew predictive outcomes.
 
-While our model achieves moderate accuracy and recall, it brings to light the influential role of both well-known and less-recognized risk factors. Particularly, it identifies cholesterol levels and smoking habits as key predictors of CVD risk, adding to the traditional emphasis on age and blood pressure metrics. These findings are a clarion call for deeper explorations into the multifaceted causes of CVD, with the ultimate aim of honing the precision of our predictive tools.
+While our model achieves moderate accuracy (62.2%) )and recall (55.2%), it brings to light the influential role of both well-known and less-recognized risk factors. Particularly, it identifies cholesterol levels and smoking habits as key predictors of CVD risk, adding to the traditional emphasis on age and blood pressure metrics. These findings are a clarion call for deeper explorations into the multifaceted causes of CVD, with the ultimate aim of honing the precision of our predictive tools.
 
-The journey of CardioPredict does not culminate with the current findings but rather opens new avenues for exploration in the landscape of medical diagnostics. We invite collaborators, researchers, and healthcare professionals to engage with our findings, critique our approach, and contribute to the ongoing enhancement of our model. Together, we can turn the tide against cardiovascular disease and save lives through the power of predictive analytics.
+# Community Guidelines
 
-Explore our repository to delve into the intricacies of our analysis, witness the evolution of our model, and partake in our quest to outwit cardiovascular disease.
+The journey of CardioPredict does not culminate with the current findings but rather opens new avenues for exploration in the landscape of medical diagnostics. We invite collaborators, researchers, and healthcare professionals to engage with our findings, critique our approach, and contribute to the ongoing enhancement of our analysis.
 
-Final report: [n](https://ubc-mds.github.io/CardioPredict/src/heart_analyis_model.html)eed a new link here
+Explore our repository to delve into the intricacies of our analysis, witness the evolution of our model, and partake in our quest to outwit cardiovascular disease. If you're looking to contribute to the project, we welcome your interest! Please start by reading our CONTRIBUTING.md file for details on how to submit pull requests, and we recommend you to discuss your proposed changes with us via issues before starting to work on them. Found a bug or have a feature request? We value your input! Please log an issue on our GitHub repository with a clear title and a detailed description. Ensure to check existing issues to avoid duplicates and provide steps to reproduce the issue, if applicable. For any questions or support requests, please use the Issues section of our GitHub repository. Provide as much context as possible to help us understand and address your query promptly.
+
+Final report: [need a new link here]()
 
 # Installation and Setup
 
@@ -150,11 +152,11 @@ The dataset includes variables such as age, gender, blood pressure, cholesterol 
 | CIG      | cigarettes per day at baseline (0-60)                                  |
 | disease  | 1 if coronary heart disease occurred during the follow-up, 0 otherwise |
 
-# Results and Evaluation 
+# Results and Evaluation
 
-Our study has refined the k-Nearest Neighbors (kNN) model for cardiovascular disease prediction, showcasing that oversampling significantly improves recall-a primary focus of our research-especially with a lower number of neighbors, while maintaining reasonable accuracy. Choosing nine neighbors strikes a balance between complexity and generalization, avoiding overfitting and ensuring reliable recall, which is vital for medical diagnostics. A permutation-based analysis revealed AGE (age) and SBP (systolic blood pressure) as critical predictors, along with CHOL (cholesterol levels) and CIG (cigarette consumption), indicating a complex interplay of risk factors. The observed modest levels of overall accuracy and recall highlight the need for further methodological improvements.  These insights underline the potential of our model to inform clinical practice, enhancing personalized patient care despite the presence of false negatives and positives, which point to areas for future improvement. The final report includes detailed metrics and graphical representations of the model's performance.
+This analysis has refined the k-Nearest Neighbors (kNN) model for cardiovascular disease prediction, showcasing that oversampling significantly improves recall-a primary focus of our research-especially with a lower number of neighbors, while maintaining reasonable accuracy. Choosing nine neighbors strikes a balance between complexity and generalization, avoiding overfitting and ensuring reliable recall, which is vital for medical diagnostics. A permutation-based analysis revealed AGE (age) and SBP (systolic blood pressure) as critical predictors, along with CHOL (cholesterol levels) and CIG (cigarette consumption), indicating a complex interplay of risk factors. The observed modest levels of overall accuracy (62.2%)and recall (55.2%) highlight the need for further methodological improvements.  These insights underline the potential of our model to inform clinical practice, enhancing personalized patient care despite the presence of false negatives and positives, which point to areas for future improvement. The final report includes detailed metrics and graphical representations of the model's performance.
 
-# Future Work 
+# Future Work
 
 Future work will prioritize advancing our cardiovascular disease diagnostic model through a comprehensive, multifaceted approach. This will involve incorporating a broader range of clinical data, such as cholesterol levels and smoking habits, which have proven significant in our analyses. Additionally, we aim to refine the model's accuracy and recall by employing advanced algorithmic techniques and cost-sensitive learning frameworks, ensuring a delicate balance between sensitivity and specificity. These efforts are crucial for optimizing the model's performance in real-world clinical settings, addressing the economic and human costs of false diagnoses, and ultimately enhancing patient care and outcomes.
 
@@ -202,4 +204,4 @@ Tsao, C. W., & Vasan, R. S. (2015). The Framingham Heart Study: past, present an
 
 # License
 
-The CadioPredict report contained herein are licensed under the [Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License](https://creativecommons.org/licenses/by-nc-sa/4.0/). See [the license file](https://github.com/UBC-MDS/CardioPredict/blob/main/LICENSE) for more information. . If re-using/re-mixing please provide attribution and link to this webpage. The software code contained within this repository is licensed under the MIT license. See [the license file](https://github.com/UBC-MDS/CardioPredict/blob/main/LICENSE) for more information.
+The CadioPredict report contained herein are licensed under the [Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License](https://creativecommons.org/licenses/by-nc-sa/4.0/). See [the license file](https://github.com/UBC-MDS/CardioPredict/blob/main/LICENSE) for more information. If re-using/re-mixing please provide attribution and link to this webpage. The software code contained within this repository is licensed under the MIT license. See [the license file](https://github.com/UBC-MDS/CardioPredict/blob/main/LICENSE) for more information.
