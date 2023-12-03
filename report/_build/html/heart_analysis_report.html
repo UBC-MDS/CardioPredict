@@ -7,7 +7,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>CardioPredict: Assessing Cardiovascular Disease Risk &#8212; CardioPredict: Assessing Cardiovascular Disease Risk</title>
   
@@ -348,8 +348,8 @@ document.write(`
 <h1>CardioPredict: Assessing Cardiovascular Disease Risk<a class="headerlink" href="#cardiopredict-assessing-cardiovascular-disease-risk" title="Permalink to this heading">#</a></h1>
 <p><em>CardioPredict harnesses the power of kNN Models to analyze key health indicators and provide a predictive model for assessing the risk of cardiovascular disease in individuals.</em></p>
 <p>Authors: (listed alphabetically)</p>
-<p>Ma, He - UBC-MDS</p>
 <p>Gross, Sandy - UBC-MDS</p>
+<p>Ma, He - UBC-MDS</p>
 <p>Wang, Doris - UBC-MDS</p>
 <p>Wu, Joey - UBC, MDS</p>
 <div class="cell tag_remove-input docutils container">
@@ -376,7 +376,7 @@ Our dataset, derived from this study and provided by Professor Paul Blanche <spa
 <section id="data-description">
 <h2>Data Description<a class="headerlink" href="#data-description" title="Permalink to this heading">#</a></h2>
 <p>Key variables in this dataset include age, gender, systolic and diastolic blood pressure (SBP and DBP), cholesterol levels, Framingham relative weight (FRW), and smoking habits (measured as cigarettes per day). These variables offer a multifaceted view into each individual’s health status, providing a robust foundation for our predictive analysis. For example, ‘sex’ is categorized into Female or Male, ‘AGE’ represents the age of individuals in years, ‘FRW’ indicates the Framingham relative weight percentage at baseline ranging from 52 to 222, ‘SBP’ and ‘DBP’ measure blood pressure in mmHg, ‘CHOL’ shows cholesterol levels in mg/100ml, and ‘CIG’ quantifies cigarette consumption per day. The ‘disease’ variable,which serves as out target variable, marks the occurrence of coronary heart disease during the study, noted as 1 for occurrence and 0 otherwise.</p>
-<table class="colwidths-auto table">
+<table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Variable</p></th>
 <th class="head"><p>Explanation</p></th>
@@ -517,57 +517,57 @@ Our dataset, derived from this study and provided by Professor Paul Blanche <spa
 <p>The classification report <a class="reference internal" href="#test-scores-df"><span class="std std-numref">Figure 11</span></a> provides insights into the model’s performance on the test set. The support for non-CVD cases is <span class="pasted-text">273.0</span>, indicating that there were <span class="pasted-text">215.0</span> instances of non-CVD in the test data that the model attempted to classify. On the other hand, there were <span class="pasted-text">58.0</span> instances of CVD, reflecting a smaller subset of the data. The classifier’s performance in distinguishing between patients with and without cardiovascular disease (CVD) indicates a recall of <span class="pasted-text">0.552</span> for CVD cases, suggesting that approximately, 55.2% of actual <span class="pasted-text">58.0</span> CVD cases were correctly identified. While the precision for non-CVD cases stands at a higher threshold, it is the recall metric that is of paramount concern in medical diagnostics to ensure at-risk patients are not overlooked. Overall accuracy of the model is <span class="pasted-text">0.623</span>, which, while indicative of a moderate predictive ability, underscores the necessity of optimizing the recall for CVD patients due to the high stakes involved in early and accurate diagnosis. It is crucial to enhance the model’s sensitivity to CVD cases to improve patient outcomes and healthcare delivery.</p>
 <figure class="align-default" id="test-scores-df" style="width: 400px">
 <div class="output text_html"><style type="text/css">
-#T_8122c caption {
+#T_11a7d caption {
   color: black;
   font-size: 16px;
 }
 </style>
-<table id="T_8122c">
+<table id="T_11a7d">
   <caption>Classification Report</caption>
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_8122c_level0_col0" class="col_heading level0 col0" >precision</th>
-      <th id="T_8122c_level0_col1" class="col_heading level0 col1" >recall</th>
-      <th id="T_8122c_level0_col2" class="col_heading level0 col2" >f1-score</th>
-      <th id="T_8122c_level0_col3" class="col_heading level0 col3" >support</th>
+      <th id="T_11a7d_level0_col0" class="col_heading level0 col0" >precision</th>
+      <th id="T_11a7d_level0_col1" class="col_heading level0 col1" >recall</th>
+      <th id="T_11a7d_level0_col2" class="col_heading level0 col2" >f1-score</th>
+      <th id="T_11a7d_level0_col3" class="col_heading level0 col3" >support</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_8122c_level0_row0" class="row_heading level0 row0" >non-CVD</th>
-      <td id="T_8122c_row0_col0" class="data row0 col0" >0.841</td>
-      <td id="T_8122c_row0_col1" class="data row0 col1" >0.642</td>
-      <td id="T_8122c_row0_col2" class="data row0 col2" >0.728</td>
-      <td id="T_8122c_row0_col3" class="data row0 col3" >215.000</td>
+      <th id="T_11a7d_level0_row0" class="row_heading level0 row0" >non-CVD</th>
+      <td id="T_11a7d_row0_col0" class="data row0 col0" >0.841</td>
+      <td id="T_11a7d_row0_col1" class="data row0 col1" >0.642</td>
+      <td id="T_11a7d_row0_col2" class="data row0 col2" >0.728</td>
+      <td id="T_11a7d_row0_col3" class="data row0 col3" >215.000</td>
     </tr>
     <tr>
-      <th id="T_8122c_level0_row1" class="row_heading level0 row1" >CVD</th>
-      <td id="T_8122c_row1_col0" class="data row1 col0" >0.294</td>
-      <td id="T_8122c_row1_col1" class="data row1 col1" >0.552</td>
-      <td id="T_8122c_row1_col2" class="data row1 col2" >0.383</td>
-      <td id="T_8122c_row1_col3" class="data row1 col3" >58.000</td>
+      <th id="T_11a7d_level0_row1" class="row_heading level0 row1" >CVD</th>
+      <td id="T_11a7d_row1_col0" class="data row1 col0" >0.294</td>
+      <td id="T_11a7d_row1_col1" class="data row1 col1" >0.552</td>
+      <td id="T_11a7d_row1_col2" class="data row1 col2" >0.383</td>
+      <td id="T_11a7d_row1_col3" class="data row1 col3" >58.000</td>
     </tr>
     <tr>
-      <th id="T_8122c_level0_row2" class="row_heading level0 row2" >accuracy</th>
-      <td id="T_8122c_row2_col0" class="data row2 col0" >0.623</td>
-      <td id="T_8122c_row2_col1" class="data row2 col1" >0.623</td>
-      <td id="T_8122c_row2_col2" class="data row2 col2" >0.623</td>
-      <td id="T_8122c_row2_col3" class="data row2 col3" >0.623</td>
+      <th id="T_11a7d_level0_row2" class="row_heading level0 row2" >accuracy</th>
+      <td id="T_11a7d_row2_col0" class="data row2 col0" >0.623</td>
+      <td id="T_11a7d_row2_col1" class="data row2 col1" >0.623</td>
+      <td id="T_11a7d_row2_col2" class="data row2 col2" >0.623</td>
+      <td id="T_11a7d_row2_col3" class="data row2 col3" >0.623</td>
     </tr>
     <tr>
-      <th id="T_8122c_level0_row3" class="row_heading level0 row3" >macro avg</th>
-      <td id="T_8122c_row3_col0" class="data row3 col0" >0.568</td>
-      <td id="T_8122c_row3_col1" class="data row3 col1" >0.597</td>
-      <td id="T_8122c_row3_col2" class="data row3 col2" >0.556</td>
-      <td id="T_8122c_row3_col3" class="data row3 col3" >273.000</td>
+      <th id="T_11a7d_level0_row3" class="row_heading level0 row3" >macro avg</th>
+      <td id="T_11a7d_row3_col0" class="data row3 col0" >0.568</td>
+      <td id="T_11a7d_row3_col1" class="data row3 col1" >0.597</td>
+      <td id="T_11a7d_row3_col2" class="data row3 col2" >0.556</td>
+      <td id="T_11a7d_row3_col3" class="data row3 col3" >273.000</td>
     </tr>
     <tr>
-      <th id="T_8122c_level0_row4" class="row_heading level0 row4" >weighted avg</th>
-      <td id="T_8122c_row4_col0" class="data row4 col0" >0.725</td>
-      <td id="T_8122c_row4_col1" class="data row4 col1" >0.623</td>
-      <td id="T_8122c_row4_col2" class="data row4 col2" >0.655</td>
-      <td id="T_8122c_row4_col3" class="data row4 col3" >273.000</td>
+      <th id="T_11a7d_level0_row4" class="row_heading level0 row4" >weighted avg</th>
+      <td id="T_11a7d_row4_col0" class="data row4 col0" >0.725</td>
+      <td id="T_11a7d_row4_col1" class="data row4 col1" >0.623</td>
+      <td id="T_11a7d_row4_col2" class="data row4 col2" >0.655</td>
+      <td id="T_11a7d_row4_col3" class="data row4 col3" >273.000</td>
     </tr>
   </tbody>
 </table>
@@ -595,50 +595,64 @@ Our dataset, derived from this study and provided by Professor Paul Blanche <spa
 <section id="references">
 <h1>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h1>
 <div class="docutils container" id="id17">
-<dl class="citation">
-<dt class="label" id="id27"><span class="brackets"><a class="fn-backref" href="#id6">niha</a></span></dt>
-<dd><p>Biolincc: framingham heart study-cohort (fhs-cohort). URL: <a class="reference external" href="https://biolincc.nhlbi.nih.gov/studies/framcohort/">https://biolincc.nhlbi.nih.gov/studies/framcohort/</a>.</p>
-</dd>
-<dt class="label" id="id30"><span class="brackets"><a class="fn-backref" href="#id5">who</a></span></dt>
-<dd><p>Cardiovascular diseases (cvds). URL: <a class="reference external" href="https://www.who.int/news-room/fact-sheets/detail/cardiovascular-diseases-(cvds)">https://www.who.int/news-room/fact-sheets/detail/cardiovascular-diseases-(cvds)</a>.</p>
-</dd>
-<dt class="label" id="id31"><span class="brackets">whf</span><span class="fn-backref">(<a href="#id2">1</a>,<a href="#id3">2</a>)</span></dt>
-<dd><p>Deaths from cardiovascular disease surged 60. URL: <a class="reference external" href="https://world-heart-federation.org/news/deaths-from-cardiovascular-disease-surged-60-globally-over-the-last-30-years-report/">https://world-heart-federation.org/news/deaths-from-cardiovascular-disease-surged-60-globally-over-the-last-30-years-report/</a>.</p>
-</dd>
-<dt class="label" id="id28"><span class="brackets"><a class="fn-backref" href="#id4">fhs</a></span></dt>
-<dd><p>Framingham heart study (three generations of dedication). URL: <a class="reference external" href="https://www.framinghamheartstudy.org/">https://www.framinghamheartstudy.org/</a>.</p>
-</dd>
-<dt class="label" id="id26"><span class="brackets"><a class="fn-backref" href="#id11">dat</a></span></dt>
-<dd><p>Framingham data. URL: <a class="reference external" href="https://paulblanche.com/files/DataFramingham.html">https://paulblanche.com/files/DataFramingham.html</a>.</p>
-</dd>
-<dt class="label" id="id29"><span class="brackets"><a class="fn-backref" href="#id10">nihb</a></span></dt>
-<dd><p>National heart, lung, and blood institute. 2021. framingham heart study longitudinal data documentation for teaching dataset. URL: <a class="reference external" href="https://biolincc.nhlbi.nih.gov/media/teachingstudies/FHS_Teaching_Longitudinal_Data_Documentation_2021a.pdf">https://biolincc.nhlbi.nih.gov/media/teachingstudies/FHS_Teaching_Longitudinal_Data_Documentation_2021a.pdf</a>.</p>
-</dd>
-<dt class="label" id="id32"><span class="brackets"><a class="fn-backref" href="#id1">whr</a></span></dt>
-<dd><p>World heart report 2023: full report - world heart federation. URL: <a class="reference external" href="https://world-heart-federation.org/resource/world-heart-report-2023/">https://world-heart-federation.org/resource/world-heart-report-2023/</a>.</p>
-</dd>
-<dt class="label" id="id24"><span class="brackets"><a class="fn-backref" href="#id15">APA+21</a></span></dt>
-<dd><p>Md Mamun Ali, Bikash Kumar Paul, Kawsar Ahmed, Francis M. Bui, Julian M.W. Quinn, and Mohammad Ali Moni. Heart disease prediction using supervised machine learning algorithms: performance analysis and comparison. <em>Computers in Biology and Medicine</em>, 136:104672, 9 2021. <a class="reference external" href="https://doi.org/10.1016/J.COMPBIOMED.2021.104672">doi:10.1016/J.COMPBIOMED.2021.104672</a>.</p>
-</dd>
-<dt class="label" id="id19"><span class="brackets"><a class="fn-backref" href="#id7">AJB+19</a></span></dt>
-<dd><p>Charlotte Andersson, Andrew D. Johnson, Emelia J. Benjamin, Daniel Levy, and Ramachandran S. Vasan. 70-year legacy of the framingham heart study. <em>Nature Reviews Cardiology 2019 16:11</em>, 16:687–698, 5 2019. URL: <a class="reference external" href="https://www.nature.com/articles/s41569-019-0202-5">https://www.nature.com/articles/s41569-019-0202-5</a>, <a class="reference external" href="https://doi.org/10.1038/s41569-019-0202-5">doi:10.1038/s41569-019-0202-5</a>.</p>
-</dd>
-<dt class="label" id="id20"><span class="brackets"><a class="fn-backref" href="#id9">ANT+21</a></span></dt>
-<dd><p>Charlotte Andersson, Matthew Nayor, Connie W. Tsao, Daniel Levy, and Ramachandran S. Vasan. Framingham heart study: jacc focus seminar, 1/8. <em>Journal of the American College of Cardiology</em>, 77:2680–2692, 6 2021. <a class="reference external" href="https://doi.org/10.1016/J.JACC.2021.01.059">doi:10.1016/J.JACC.2021.01.059</a>.</p>
-</dd>
-<dt class="label" id="id22"><span class="brackets"><a class="fn-backref" href="#id13">Che18</a></span></dt>
-<dd><p>Walid Cherif. Optimization of k-nn algorithm by clustering and reliability coefficients: application to breast-cancer diagnosis. <em>Procedia Computer Science</em>, 127:293–299, 1 2018. <a class="reference external" href="https://doi.org/10.1016/J.PROCS.2018.01.125">doi:10.1016/J.PROCS.2018.01.125</a>.</p>
-</dd>
-<dt class="label" id="id25"><span class="brackets"><a class="fn-backref" href="#id14">jDC13</a></span></dt>
-<dd><p>M. Akhil jabbar, B.L. Deekshatulu, and Priti Chandra. Classification of heart disease using k- nearest neighbor and genetic algorithm. <em>Procedia Technology</em>, 10:85–94, 1 2013. <a class="reference external" href="https://doi.org/10.1016/J.PROTCY.2013.12.340">doi:10.1016/J.PROTCY.2013.12.340</a>.</p>
-</dd>
-<dt class="label" id="id23"><span class="brackets"><a class="fn-backref" href="#id12">Lah23</a></span></dt>
-<dd><p>Salim Lahmiri. Integrating convolutional neural networks, knn, and bayesian optimization for efficient diagnosis of alzheimer's disease in magnetic resonance images. <em>Biomedical Signal Processing and Control</em>, 80:104375, 2 2023. <a class="reference external" href="https://doi.org/10.1016/J.BSPC.2022.104375">doi:10.1016/J.BSPC.2022.104375</a>.</p>
-</dd>
-<dt class="label" id="id21"><span class="brackets"><a class="fn-backref" href="#id16">PVG+12</a></span></dt>
-<dd><p>Fabian Pedregosa, Gael Varoquaux, Alexandre Gramfort, Vincent Michel, Bertrand Thirion, Olivier Grisel, Mathieu Blondel, Peter Prettenhofer, Ron Weiss, Vincent Dubourg, Jake Vanderplas, Alexandre Passos, David Cournapeau, Matthieu Brucher, Matthieu Perrot, and Édouard Duchesnay. Scikit-learn: machine learning in python. <em>Journal of Machine Learning Research</em>, 12:2825–2830, 1 2012. URL: <a class="reference external" href="https://arxiv.org/abs/1201.0490v4">https://arxiv.org/abs/1201.0490v4</a>.</p>
-</dd>
-</dl>
+<div class="citation" id="id27" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id6">niha</a><span class="fn-bracket">]</span></span>
+<p>Biolincc: framingham heart study-cohort (fhs-cohort). URL: <a class="reference external" href="https://biolincc.nhlbi.nih.gov/studies/framcohort/">https://biolincc.nhlbi.nih.gov/studies/framcohort/</a>.</p>
+</div>
+<div class="citation" id="id30" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id5">who</a><span class="fn-bracket">]</span></span>
+<p>Cardiovascular diseases (cvds). URL: <a class="reference external" href="https://www.who.int/news-room/fact-sheets/detail/cardiovascular-diseases-(cvds)">https://www.who.int/news-room/fact-sheets/detail/cardiovascular-diseases-(cvds)</a>.</p>
+</div>
+<div class="citation" id="id31" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>whf<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id2">1</a>,<a role="doc-backlink" href="#id3">2</a>)</span>
+<p>Deaths from cardiovascular disease surged 60. URL: <a class="reference external" href="https://world-heart-federation.org/news/deaths-from-cardiovascular-disease-surged-60-globally-over-the-last-30-years-report/">https://world-heart-federation.org/news/deaths-from-cardiovascular-disease-surged-60-globally-over-the-last-30-years-report/</a>.</p>
+</div>
+<div class="citation" id="id28" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">fhs</a><span class="fn-bracket">]</span></span>
+<p>Framingham heart study (three generations of dedication). URL: <a class="reference external" href="https://www.framinghamheartstudy.org/">https://www.framinghamheartstudy.org/</a>.</p>
+</div>
+<div class="citation" id="id26" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id11">dat</a><span class="fn-bracket">]</span></span>
+<p>Framingham data. URL: <a class="reference external" href="https://paulblanche.com/files/DataFramingham.html">https://paulblanche.com/files/DataFramingham.html</a>.</p>
+</div>
+<div class="citation" id="id29" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id10">nihb</a><span class="fn-bracket">]</span></span>
+<p>National heart, lung, and blood institute. 2021. framingham heart study longitudinal data documentation for teaching dataset. URL: <a class="reference external" href="https://biolincc.nhlbi.nih.gov/media/teachingstudies/FHS_Teaching_Longitudinal_Data_Documentation_2021a.pdf">https://biolincc.nhlbi.nih.gov/media/teachingstudies/FHS_Teaching_Longitudinal_Data_Documentation_2021a.pdf</a>.</p>
+</div>
+<div class="citation" id="id32" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">whr</a><span class="fn-bracket">]</span></span>
+<p>World heart report 2023: full report - world heart federation. URL: <a class="reference external" href="https://world-heart-federation.org/resource/world-heart-report-2023/">https://world-heart-federation.org/resource/world-heart-report-2023/</a>.</p>
+</div>
+<div class="citation" id="id24" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id15">APA+21</a><span class="fn-bracket">]</span></span>
+<p>Md Mamun Ali, Bikash Kumar Paul, Kawsar Ahmed, Francis M. Bui, Julian M.W. Quinn, and Mohammad Ali Moni. Heart disease prediction using supervised machine learning algorithms: performance analysis and comparison. <em>Computers in Biology and Medicine</em>, 136:104672, 9 2021. <a class="reference external" href="https://doi.org/10.1016/J.COMPBIOMED.2021.104672">doi:10.1016/J.COMPBIOMED.2021.104672</a>.</p>
+</div>
+<div class="citation" id="id19" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id7">AJB+19</a><span class="fn-bracket">]</span></span>
+<p>Charlotte Andersson, Andrew D. Johnson, Emelia J. Benjamin, Daniel Levy, and Ramachandran S. Vasan. 70-year legacy of the framingham heart study. <em>Nature Reviews Cardiology 2019 16:11</em>, 16:687–698, 5 2019. URL: <a class="reference external" href="https://www.nature.com/articles/s41569-019-0202-5">https://www.nature.com/articles/s41569-019-0202-5</a>, <a class="reference external" href="https://doi.org/10.1038/s41569-019-0202-5">doi:10.1038/s41569-019-0202-5</a>.</p>
+</div>
+<div class="citation" id="id20" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id9">ANT+21</a><span class="fn-bracket">]</span></span>
+<p>Charlotte Andersson, Matthew Nayor, Connie W. Tsao, Daniel Levy, and Ramachandran S. Vasan. Framingham heart study: jacc focus seminar, 1/8. <em>Journal of the American College of Cardiology</em>, 77:2680–2692, 6 2021. <a class="reference external" href="https://doi.org/10.1016/J.JACC.2021.01.059">doi:10.1016/J.JACC.2021.01.059</a>.</p>
+</div>
+<div class="citation" id="id22" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id13">Che18</a><span class="fn-bracket">]</span></span>
+<p>Walid Cherif. Optimization of k-nn algorithm by clustering and reliability coefficients: application to breast-cancer diagnosis. <em>Procedia Computer Science</em>, 127:293–299, 1 2018. <a class="reference external" href="https://doi.org/10.1016/J.PROCS.2018.01.125">doi:10.1016/J.PROCS.2018.01.125</a>.</p>
+</div>
+<div class="citation" id="id25" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id14">jDC13</a><span class="fn-bracket">]</span></span>
+<p>M. Akhil jabbar, B.L. Deekshatulu, and Priti Chandra. Classification of heart disease using k- nearest neighbor and genetic algorithm. <em>Procedia Technology</em>, 10:85–94, 1 2013. <a class="reference external" href="https://doi.org/10.1016/J.PROTCY.2013.12.340">doi:10.1016/J.PROTCY.2013.12.340</a>.</p>
+</div>
+<div class="citation" id="id23" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id12">Lah23</a><span class="fn-bracket">]</span></span>
+<p>Salim Lahmiri. Integrating convolutional neural networks, knn, and bayesian optimization for efficient diagnosis of alzheimer's disease in magnetic resonance images. <em>Biomedical Signal Processing and Control</em>, 80:104375, 2 2023. <a class="reference external" href="https://doi.org/10.1016/J.BSPC.2022.104375">doi:10.1016/J.BSPC.2022.104375</a>.</p>
+</div>
+<div class="citation" id="id21" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id16">PVG+12</a><span class="fn-bracket">]</span></span>
+<p>Fabian Pedregosa, Gael Varoquaux, Alexandre Gramfort, Vincent Michel, Bertrand Thirion, Olivier Grisel, Mathieu Blondel, Peter Prettenhofer, Ron Weiss, Vincent Dubourg, Jake Vanderplas, Alexandre Passos, David Cournapeau, Matthieu Brucher, Matthieu Perrot, and Édouard Duchesnay. Scikit-learn: machine learning in python. <em>Journal of Machine Learning Research</em>, 12:2825–2830, 1 2012. URL: <a class="reference external" href="https://arxiv.org/abs/1201.0490v4">https://arxiv.org/abs/1201.0490v4</a>.</p>
+</div>
+</div>
 </div>
 </section>
 
