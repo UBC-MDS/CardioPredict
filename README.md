@@ -150,13 +150,13 @@ The dataset includes variables such as age, gender, blood pressure, cholesterol 
 | CIG      | cigarettes per day at baseline (0-60)                                  |
 | disease  | 1 if coronary heart disease occurred during the follow-up, 0 otherwise |
 
-# Results and Evaluation (rewrite)
+# Results and Evaluation 
 
-The Logistic Regression model achieved an accuracy of 55.3% and a recall of 84%, effectively identifying disease presence but also resulting in many false positives. The class-balanced kNN model showed a recall of 51.7% and an accuracy of 63.7%. The model's performance metrics and graphs are included in the final report.
+Our study has enhanced the k-Nearest Neighbors (kNN) model for predicting cardiovascular disease, demonstrating that oversampling markedly boosts recall—a primary focus of our research—particularly when fewer neighbors are used, without compromising accuracy. By selecting nine neighbors, we achieved a prudent balance between minimizing model complexity and maximizing generalizability, thereby preventing overfitting and ensuring consistent recall, a crucial factor in medical diagnostics. Through permutation-based analysis, we identified age (AGE) and systolic blood pressure (SBP) as key predictive factors, alongside cholesterol levels (CHOL) and cigarette consumption (CIG), showcasing the intricate dynamics of risk factors. The modest levels of accuracy and recall that were observed underscore the necessity for ongoing refinement of our methodology. These findings highlight the model's capacity to enhance clinical practice by offering more personalized patient care, in spite of the challenges posed by false negatives and positives, and direct us toward specific areas for future enhancements. The final report includes detailed metrics and graphical representations of the model's performance.
 
-# Future Work (rewrite)
+# Future Work 
 
-Future extensions of this project could include exploring more complex models, incorporating more variables, and applying the model to other datasets to validate its robustness.
+Future work will prioritize advancing our cardiovascular disease diagnostic model through a comprehensive, multifaceted approach. This will involve incorporating a broader range of clinical data, such as cholesterol levels and smoking habits, which have proven significant in our analyses. Additionally, we aim to refine the model's accuracy and recall by employing advanced algorithmic techniques and cost-sensitive learning frameworks, ensuring a delicate balance between sensitivity and specificity. These efforts are crucial for optimizing the model's performance in real-world clinical settings, addressing the economic and human costs of false diagnoses, and ultimately enhancing patient care and outcomes.
 
 # References
 
