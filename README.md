@@ -40,7 +40,7 @@ The journey of CardioPredict does not culminate with the current findings but ra
 
 Explore our repository to delve into the intricacies of our analysis, witness the evolution of our model, and partake in our quest to outwit cardiovascular disease. If you're looking to contribute to the project, we welcome your interest! Please start by reading our CONTRIBUTING.md file for details on how to submit pull requests, and we recommend you to discuss your proposed changes with us via issues before starting to work on them. Found a bug or have a feature request? We value your input! Please log an issue on our GitHub repository with a clear title and a detailed description. Ensure to check existing issues to avoid duplicates and provide steps to reproduce the issue, if applicable. For any questions or support requests, please use the Issues section of our GitHub repository. Provide as much context as possible to help us understand and address your query promptly.
 
-Final report: [need a new link here]()
+Final report: [Link](https://ubc-mds.github.io/CardioPredict/heart_analysis_report.html)
 
 # Installation and Setup
 
