@@ -1,6 +1,6 @@
 services:
   disease_pred:
-    image: sandragross/522_project_10:f53957a
+    image: sandragross/522_project_10:6043d95
     ports:
       - "8888:8888"
     volumes:
