@@ -15,6 +15,20 @@ def create_pairwise_scatter_plot(df, features):
 
     Returns:
     Chart: An Altair Chart object representing the pairwise scatter plot matrix.
+        Example:
+    --------
+    >>> import pandas as pd
+    >>> # Sample DataFrame
+    >>> data = {'feature1': [1, 2, 3, 4],
+    >>>         'feature2': [4, 3, 2, 1],
+    >>>         'feature3': [1, 3, 2, 4],
+    >>>         'disease': ['A', 'B', 'A', 'B']}
+    >>> df = pd.DataFrame(data)
+    >>> # List of features to plot
+    >>> features = ['feature1', 'feature2', 'feature3']
+    >>> # Create and display the plot
+    >>> chart = create_pairwise_scatter_plot(df, features)
+    >>> chart.display()
     """
     base = alt.Chart(df).mark_point(opacity=0.5, size=10)
 
