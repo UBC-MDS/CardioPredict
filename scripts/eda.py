@@ -16,9 +16,11 @@ def main(df, plot_to, data_to):
     """
 
     df = pd.read_csv(df)
+    df['disease_label'] = df['disease'].replace({1: 'CVD', 0: 'non-CVD'})
+
     # 1.distribution of target feature
     target_chart = alt.Chart(df).mark_bar().encode(
-    x='disease:O',
+    x='disease_label:O',
     y=alt.Y('count():Q', axis=alt.Axis(title='Count')),
     text=alt.Text('count():Q')
     ).properties(
@@ -86,7 +88,7 @@ def main(df, plot_to, data_to):
     pairwise_chart = base.encode(
         x=alt.X(alt.repeat("row"), type='quantitative', scale=alt.Scale(zero=False)),
         y=alt.Y(alt.repeat("column"), type='quantitative', scale=alt.Scale(zero=False)),
-        color='disease:N'
+        color='disease_label:N'
     ).properties(
         width=150,
         height=150
@@ -105,7 +107,7 @@ def main(df, plot_to, data_to):
     sex_chart = alt.Chart(df).mark_bar().encode(
         y="sex",
         x= "count()",
-        color = "disease:N"
+        color = "disease_label:N"
     )
     sex_chart.save(os.path.join(plot_to, "distribution_of_the_sex_variable.png"),
               scale_factor=2.0)
