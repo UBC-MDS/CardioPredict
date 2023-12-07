@@ -42,9 +42,13 @@ categorical_features = ['sex']
 
 # Test for correct return type
 def test_evaluate_logistic_regression_output_type():
-    cm, report, gs, gs_res = evaluate_logistic_regression(
+    results = evaluate_logistic_regression(
         X_train, y_train, X_test, y_test, numeric_features, categorical_features
     )
+    cm = results['confusion_matrix']
+    report = results['classification_report']
+    gs = results['grid_search_object']
+    gs_res = results['grid_search_results']
     assert isinstance(cm, np.ndarray), "'evaluate_logistic_regression' should return a numpy array for the confusion matrix"
     assert isinstance(report, str), "'evaluate_logistic_regression' should return a string for the classification report"
     assert isinstance(gs, GridSearchCV), "'evaluate_logistic_regression' should return a GridSearchCV object"
@@ -52,9 +56,13 @@ def test_evaluate_logistic_regression_output_type():
 
 
 def test_evaluate_logistic_regression_output_format():
-    cm, report, gs, gs_res = evaluate_logistic_regression(
+    results = evaluate_logistic_regression(
         X_train, y_train, X_test, y_test, numeric_features, categorical_features
     )
+    cm = results['confusion_matrix']
+    report = results['classification_report']
+    gs = results['grid_search_object']
+    gs_res = results['grid_search_results']
     
     # Confusion Matrix checks
     assert cm.shape == (2, 2), "Confusion matrix should have a shape of 2x2 for binary classification"
@@ -66,9 +74,14 @@ def test_evaluate_logistic_regression_output_format():
 
 # Test whether the GridSearchCV is fitted and has the excepted attributes
 def test_grid_search_is_fitted():
-    cm_df, report_df, gs, gs_res = evaluate_logistic_regression(
+    results = evaluate_logistic_regression(
         X_train, y_train, X_test, y_test, numeric_features, categorical_features
     )
+    cm = results['confusion_matrix']
+    report = results['classification_report']
+    gs = results['grid_search_object']
+    gs_res = results['grid_search_results']
+    
     # Access the model from the pipeline
     best_model = gs.best_estimator_.named_steps['logisticregression']
     # Check if the model has been fitted
@@ -80,11 +93,14 @@ def test_grid_search_is_fitted():
 
 # Test whether the results for the grid search are reasonable.
 def test_evaluate_logistic_regression_grid_search_results():
-    cm_df, report_df, gs, gs_res = evaluate_logistic_regression(
+    results = evaluate_logistic_regression(
         X_train, y_train, X_test, y_test, numeric_features, categorical_features
     )
+    cm = results['confusion_matrix']
+    report = results['classification_report']
+    gs = results['grid_search_object']
+    gs_res = results['grid_search_results']
     
-
     # Check for expected columns in the grid search results DataFrame
     expected_columns = [
         'rank_test_score', 'param_logisticregression__C', 
