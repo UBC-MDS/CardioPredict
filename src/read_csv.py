@@ -10,12 +10,31 @@ def download_data(url, filepath):
     """
     Downloads a CSV file from a given URL and saves it to a specified local path.
 
+    This function checks if the URL is valid and points to a CSV file, creates the
+    directory if it doesn't exist, downloads the file, and verifies that the 
+    downloaded CSV is not empty. Raises errors for invalid URL, non-CSV content, 
+    or empty files.
+
     Parameters:
     ----------
     url : str
-        The URL of the CSV file to download.
+        The URL of the CSV file to download. Must be a valid and accessible URL.
     filepath : str
-        The local path to save the downloaded file.
+        The local path where the downloaded file will be saved. If the directory
+        in the path doesn't exist, it will be created.
+
+    Raises:
+    ------
+    ValueError:
+        - If the URL is invalid or inaccessible.
+        - If the URL does not point to a CSV file.
+        - If the downloaded CSV file is empty.
+
+    Example:
+    -------
+    >>> download_data('https://example.com/data.csv', './data/my_data.csv')
+    File downloaded successfully and saved to ./data/my_data.csv
+
     """
     response = requests.get(url)
     
