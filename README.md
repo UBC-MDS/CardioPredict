@@ -85,7 +85,7 @@ docker compose up
 
    # perform eda and save plots
    python scripts/eda.py \
-   	--df=data/processed/train_df.csv \
+   	--df=data/processed/train_data.csv \
    	--plot-to=results/figures \
    	--data-to=data/processed
 
