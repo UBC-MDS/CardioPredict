@@ -133,7 +133,7 @@ I really enjoy going through this project and gain some knowledge about Cardiova
 
 ### Added🆕
 
-- Reivew 1 from @carrieyanyi: added altair_saver=0.5.0 into dockerfile. See [commit](URLhttps://github.com/UBC-MDS/CardioPredict/commit/2aa955e1375eebc2ff9324bd54c4694c1eab375a).
+- Reivew 1 from @carrieyanyi: added altair_saver=0.5.0 into dockerfile. See [commit](https://github.com/UBC-MDS/CardioPredict/commit/2aa955e1375eebc2ff9324bd54c4694c1eab375a).
 
 ### Changed🔄
 
