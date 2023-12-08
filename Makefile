@@ -32,7 +32,7 @@ docs: results/knn_evaluation report/_config.yml report/_toc.yml
 # Clean target to remove generated files
 clean:
 	rm -f data/raw/framingham.csv
-	rm -f data/processed/train_df.csv data/processed/X_train.csv data/processed/y_train.csv data/processed/X_test.csv data/processed/y_test.csv
+	rm -f data/processed/train_data.csv data/processed/X_train.csv data/processed/y_train.csv data/processed/X_test.csv data/processed/y_test.csv
 	rm -f results/models/preprocessor.pickle results/models/imb_knn_pipeline.pickle
 	rm -f results/figures/eda_plots results/figures/knn_selection_plots results/figures/knn_training_plots
 	rm -f results/tables/knn_selection
