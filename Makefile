@@ -27,7 +27,7 @@ results/figures/knn_test_data_confusion_matrix.png results/tables/knn_test_confu
 	python scripts/knn_eval.py --x_test=data/processed/X_test.csv --y_test=data/processed/y_test.csv --trained_knn_model=results/models/imb_knn_pipeline.pickle --results-dir=results
 
 # Build HTML report and copy build to docs folder
-docs: results/knn_evaluation report/_config.yml report/_toc.yml \
+docs: report/_config.yml report/_toc.yml \
 	results/figures/distribution_of_disease_occurrence.png \
 	results/figures/age_and_health_indicators_exhibit_elevated_heart_disease.png \
 	results/figures/correlation_matrix_of_the_features.png \
