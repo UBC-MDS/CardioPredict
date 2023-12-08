@@ -9,8 +9,8 @@ data/processed/train_data.csv data/processed/X_train.csv data/processed/y_train.
 	python scripts/split_preprocess_data.py --input-file data/raw/framingham.csv --split-dir data/processed/ --preprocess-dir data/processed/ --preprocessor-to results/models/
 
 # Perform EDA and save plots
-results/figures/distribution_of_disease_occurrence.png results/figures/age_and_health_indicators_exhibit_elevated_heart_disease.png
-results/figures/correlation_matrix_of_the_features.png results/figures/pairwise_scatter_plot_matrix.png results/figures/distribution_of_the_sex_variable.png
+results/figures/distribution_of_disease_occurrence.png results/figures/age_and_health_indicators_exhibit_elevated_heart_disease.png \
+results/figures/correlation_matrix_of_the_features.png results/figures/pairwise_scatter_plot_matrix.png results/figures/distribution_of_the_sex_variable.png \
 results/figures/boxplot_of_specified_numerical_features.png : data/processed/train_data.csv
 	python scripts/eda.py --df=data/processed/train_data.csv --plot-to=results/figures --data-to=data/processed
 
