@@ -37,8 +37,7 @@ docs: results/knn_evaluation report/_config.yml report/_toc.yml \
 	results/figures/radar_feature_importance.png \
 	results/tables/knn_selection \
 	results/figures/knn_selection_plots \
-	results/models/imb_knn_pipeline.pickle \
-	results/figures/knn_training_plots
+	results/models/imb_knn_pipeline.pickle 
 	jupyter-book build report
 	cp -r report/_build/html/* docs
 
