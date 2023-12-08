@@ -124,6 +124,7 @@ make clean
 ```
 
 6. Clean Up
+   
    To stop the Docker container, go back to your terminal where you launched the container.
    Press Ctrl + C to shut it down.
    Remove the Container
