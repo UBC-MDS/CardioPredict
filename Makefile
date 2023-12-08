@@ -19,7 +19,7 @@ results/tables/knn_selection results/figures/knn_selection_plots: data/processed
 	python scripts/select_knn_model.py --x_train=data/processed/X_train.csv --y_train=data/processed/y_train.csv --preprocessor=results/models/preprocessor.pickle --table-results-to=results/tables --figure-results-to=results/figures
 
 # Train model and save results
-results/models/imb_knn_pipeline.pickle results/figures/knn_training_plots: data/processed/X_train.csv data/processed/y_train.csv results/models/preprocessor.pickle
+results/models/imb_knn_pipeline.pickle results/figures/radar_feature_importance.png: data/processed/X_train.csv data/processed/y_train.csv results/models/preprocessor.pickle
 	python scripts/fit_knn_model.py --x_train=data/processed/X_train.csv --y_train=data/processed/y_train.csv --preprocessor=results/models/preprocessor.pickle --pipeline-to=results/models --figure-results-to=results/figures
 
 # Evaluate model on test data and visualize results
@@ -34,6 +34,7 @@ docs: results/knn_evaluation report/_config.yml report/_toc.yml \
 	results/figures/pairwise_scatter_plot_matrix.png \
 	results/figures/distribution_of_the_sex_variable.png \
 	results/figures/boxplot_of_specified_numerical_features.png \
+	results/figures/radar_feature_importance.png \
 	results/tables/knn_selection \
 	results/figures/knn_selection_plots \
 	results/models/imb_knn_pipeline.pickle \
@@ -46,7 +47,8 @@ clean:
 	rm -f data/raw/framingham.csv
 	rm -f data/processed/train_data.csv data/processed/X_train.csv data/processed/y_train.csv data/processed/X_test.csv data/processed/y_test.csv
 	rm -f results/models/preprocessor.pickle results/models/imb_knn_pipeline.pickle
-	rm -f results/figures/distribution_of_disease_occurrence.png results/figures/knn_selection_plots results/figures/knn_training_plots
+	rm -f results/figures/distribution_of_disease_occurrence.png
+	rm -f results/figures/radar_feature_importance.png 
 	rm -f results/figures/age_and_health_indicators_exhibit_elevated_heart_disease.png
 	rm -f results/figures/correlation_matrix_of_the_features.png
 	rm -f results/figures/pairwise_scatter_plot_matrix.png
