@@ -25,7 +25,12 @@ results/knn_evaluation: data/processed/X_test.csv data/processed/y_test.csv resu
 	python scripts/knn_eval.py --x_test=data/processed/X_test.csv --y_test=data/processed/y_test.csv --trained_knn_model=results/models/imb_knn_pipeline.pickle --results-dir=results
 
 # Build HTML report and copy build to docs folder
-docs: results/knn_evaluation report/_config.yml report/_toc.yml
+docs: results/knn_evaluation report/_config.yml report/_toc.yml \
+	results/figures \
+	results/tables/knn_selection \
+	results/figures/knn_selection_plots \
+	results/models/imb_knn_pipeline.pickle \
+	results/figures/knn_training_plots
 	jupyter-book build report
 	cp -r report/_build/html/* docs
 
