@@ -1,6 +1,6 @@
 # CHANGELOG
 
-This document outlines the improvements and changes made to the project, particularly in response to feedback from Mileston 1, Milestone 2, team internal review and peer reviews. Each entry includes references to specific lines of code, commit messages, pull requests, etc., providing clear evidence of these enhancements.
+This document outlines the improvements and changes made to the project, particularly in response to feedback from Milestone 1, Milestone 2, team internal review and peer reviews. Each entry includes references to specific lines of code, commit messages, pull requests, etc., providing clear evidence of these enhancements.
 
 ---
 
