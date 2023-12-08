@@ -7,9 +7,9 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>CardioPredict: Assessing Cardiovascular Disease Risk &#8212; CardioPredict: Assessing Cardiovascular Disease Risk</title>
+    <title>Assessing Cardiovascular Disease Risk Utilizing the K-Nearest Neighbors Algorithm &#8212; Assessing Cardiovascular Disease Risk Utilizing the K-Nearest Neighbors Algorithm</title>
   
   
   
@@ -149,7 +149,7 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
-    <p class="title logo__title">CardioPredict: Assessing Cardiovascular Disease Risk</p>
+    <p class="title logo__title">Assessing Cardiovascular Disease Risk Utilizing the K-Nearest Neighbors Algorithm</p>
   
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
@@ -158,7 +158,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1 current active">
                 <a class="reference internal" href="#">
-                    CardioPredict: Assessing Cardiovascular Disease Risk
+                    Assessing Cardiovascular Disease Risk Utilizing the K-Nearest Neighbors Algorithm
                 </a>
             </li>
         </ul>
@@ -299,7 +299,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>CardioPredict: Assessing Cardiovascular Disease Risk</h1>
+    <h1>Assessing Cardiovascular Disease Risk Utilizing the K-Nearest Neighbors Algorithm</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -309,31 +309,30 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">CardioPredict: Assessing Cardiovascular Disease Risk</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#abstract">Abstract</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#data">Data</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-description">Data Description</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-visualization">Data Visualization</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#abstract">Abstract</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data">Data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-description">Data Description</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-visualization">Data Visualization</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#methodology">Methodology</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#model-specification-and-retionalization">Model Specification and Retionalization</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluation-metrics-and-model-performance">Evaluation Metrics and Model Performance</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-preprocessing-and-feature-handling">Data Preprocessing and Feature Handling</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hyperparameter-optimization-and-over-sample-approach">Hyperparameter Optimization and Over-Sample Approach</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estimation-strategy">Estimation Strategy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#methodology">Methodology</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#model-specification-and-retionalization">Model Specification and Retionalization</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluation-metrics-and-model-performance">Evaluation Metrics and Model Performance</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-preprocessing-and-feature-handling">Data Preprocessing and Feature Handling</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hyperparameter-optimization-and-over-sampling-approach">Hyperparameter Optimization and Over-Sampling Approach</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#estimation-strategy">Estimation Strategy</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#results">Results</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#discussion">Discussion</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contribution">Contribution</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#future-work">Future Work</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#results">Results</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#discussion">Discussion</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contribution">Contribution</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#limitations">Limitations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#future-work">Future Work</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
 </ul>
-
             </nav>
         </div>
     </div>
@@ -344,8 +343,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="cardiopredict-assessing-cardiovascular-disease-risk">
-<h1>CardioPredict: Assessing Cardiovascular Disease Risk<a class="headerlink" href="#cardiopredict-assessing-cardiovascular-disease-risk" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="assessing-cardiovascular-disease-risk-utilizing-the-k-nearest-neighbors-algorithm">
+<h1>Assessing Cardiovascular Disease Risk Utilizing the K-Nearest Neighbors Algorithm<a class="headerlink" href="#assessing-cardiovascular-disease-risk-utilizing-the-k-nearest-neighbors-algorithm" title="Permalink to this heading">#</a></h1>
 <p><em>CardioPredict harnesses the power of kNN Models to analyze key health indicators and provide a predictive model for assessing the risk of cardiovascular disease in individuals.</em></p>
 <p>Authors: (listed alphabetically)</p>
 <p>Gross, Sandy - UBC-MDS</p>
@@ -358,25 +357,24 @@ document.write(`
 </div>
 <div class="cell tag_remove-input docutils container">
 </div>
-</section>
 <section id="abstract">
-<h1>Abstract<a class="headerlink" href="#abstract" title="Permalink to this heading">#</a></h1>
-<p>Cardiovascular disease (CVD) remains a leading cause of mortality globally, necessitating the development of accurate predictive tools for early detection and intervention. This study utilizes a practice dataset from the renowned Framingham Heart Study (FHS) comprising clinical, demographic, and behavioral variables from patients at risk of CVD. The study employed a methodological approach centered on hyperparameter optimization of the k-Nearest Neighbors (kNN) algorithm, supplemented by an oversampling technique to address class imbalances and improve model sensitivity. Despite modest levels of accuracy (<span class="pasted-text">0.623</span>) and recall (<span class="pasted-text">0.552</span>), our model underscores the significance of cholesterol levels and smoking habits as substantial contributors to cardiovascular disease risk, alongside established factors such as age and systolic blood pressure. These insights pave the way for future investigations into the complex interplay of causal factors, intending to refine the predictive accuracy and clinical utility of the model.</p>
+<h2>Abstract<a class="headerlink" href="#abstract" title="Permalink to this heading">#</a></h2>
+<p>Cardiovascular disease (CVD) ranks as a foremost global health challenge, driving an urgent need for refined predictive methodologies. Leveraging data from the esteemed Framingham Heart Study, this research delves into clinical, demographic, and lifestyle factors influencing CVD risk. Central to the study is the adept use of hyperparameter-optimized k-Nearest Neighbors (kNN) algorithm, augmented by an oversampling strategy to enhance sensitivity in class-imbalanced scenarios. Despite modest levels of accuracy (<span class="pasted-text">0.645</span>) and recall (<span class="pasted-text">0.638</span>), the analysisl underscores the significance of cholesterol levels and smoking habits as substantial contributors to cardiovascular disease risk, alongside established factors such as age and systolic blood pressure. These findings catalyze further explorations into the nuanced interactions of risk factors, aiming to bolster the precision and practical application of predictive models in combating CVD.</p>
 </section>
 <section id="introduction">
-<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h1>
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
 <p>Heart disease remains the leading cause of death worldwide, with an estimated 17.9 million lives lost annually <span id="id1">[<a class="reference internal" href="#id32" title="World heart report 2023: full report - world heart federation. URL: https://world-heart-federation.org/resource/world-heart-report-2023/."><em>World Heart Report 2023: Full Report - World Heart Federation</em>, n.d.</a>]</span>. The global fatalities from cardiovascular disease (CVD) have risen from about 12.1 million in 1990 to 18.6 million in 2019 <span id="id2">[<a class="reference internal" href="#id31" title="Deaths from cardiovascular disease surged 60. URL: https://world-heart-federation.org/news/deaths-from-cardiovascular-disease-surged-60-globally-over-the-last-30-years-report/."><em>Deaths from cardiovascular disease surged 60</em>, n.d.</a>]</span>. Identifying high-risk individuals and providing timely treatment is critical to reducing premature mortality from CVDs.</p>
 <p>The assertion that up to 80 percent of premature heart attacks and strokes are preventable highlights the critical role of quality data in formulating effective health policies <span id="id3">[<a class="reference internal" href="#id31" title="Deaths from cardiovascular disease surged 60. URL: https://world-heart-federation.org/news/deaths-from-cardiovascular-disease-surged-60-globally-over-the-last-30-years-report/."><em>Deaths from cardiovascular disease surged 60</em>, n.d.</a>]</span>. The report also highlights the importance of data-driven approaches in predicting cardiovascular disease (CVD) risk. Leveraging data from the famous Framingham Heart Study <span id="id4">[<a class="reference internal" href="#id28" title="Framingham heart study (three generations of dedication). URL: https://www.framinghamheartstudy.org/."><em>Framingham Heart Study (Three Generations of Dedication)</em>, n.d.</a>]</span>, our project examines the potential of machine learning classification methods to assess heart disease risk and identify the risk factors. The dataset contains 1,363 records and includes variables such as age, gender, blood pressure, cholesterol levels, and smoking habits, analyzed to predict the likelihood of developing heart disease. Given that many cardiovascular conditions present no initial symptoms and are preventable through lifestyle modifications <span id="id5">[<a class="reference internal" href="#id30" title="Cardiovascular diseases (cvds). URL: https://www.who.int/news-room/fact-sheets/detail/cardiovascular-diseases-(cvds)."><em>Cardiovascular diseases (CVDs)</em>, n.d.</a>]</span>, an algorithm capable of accurately detecting at-risk individuals can be pivotal. Early detection is paramount to providing early interventions, which may include lifestyle counseling and proactive medication management, thereby improving patient outcomes.</p>
 </section>
 <section id="data">
-<h1>Data<a class="headerlink" href="#data" title="Permalink to this heading">#</a></h1>
+<h2>Data<a class="headerlink" href="#data" title="Permalink to this heading">#</a></h2>
 <p>The CardioPredict project utilizes data from the renowned Framingham Heart Study (FHS), initiated by the USA Public Health Service <span id="id6">[<a class="reference internal" href="#id27" title="Biolincc: framingham heart study-cohort (fhs-cohort). URL: https://biolincc.nhlbi.nih.gov/studies/framcohort/."><em>BioLINCC: Framingham Heart Study-Cohort (FHS-Cohort)</em>, n.d.</a>]</span>, a pivotal cohort study initiated in 1948 in Framingham, Massachusetts. In 2018, The FHS celebrated its seventieth anniversary, is the longest-running cardiovascular epidemiological cohort study in the USA <span id="id7">[<a class="reference internal" href="#id19" title="Charlotte Andersson, Andrew D. Johnson, Emelia J. Benjamin, Daniel Levy, and Ramachandran S. Vasan. 70-year legacy of the framingham heart study. Nature Reviews Cardiology 2019 16:11, 16:687-698, 5 2019. URL: https://www.nature.com/articles/s41569-019-0202-5, doi:10.1038/s41569-019-0202-5.">Andersson <em>et al.</em>, 2019</a>]</span>. The Framingham Heart Study (FHS) has been widely used for various research purposes. The study has contributed to the understanding of risk factors for cardiovascular diseases (CVD) such as hypertension, dyslipidemia, smoking, and diabetes <span id="id8">[]</span>. It has also facilitated the development and implementation of effective treatments for these conditions. The FHS has been instrumental in investigating the role of lifestyle habits, social networks, and genetics in CVD. Additionally, the study has provided valuable data for genomic research, including genome-wide single-nucleotide polymorphism (SNP) data and other ‘omics’ data types like DNA methylation and gene expression. The FHS continues to be relevant today in addressing challenges such as physical inactivity, obesity, and diabetes, and remains an important institution for training CVD epidemiologists and researchers <span id="id9">[<a class="reference internal" href="#id20" title="Charlotte Andersson, Matthew Nayor, Connie W. Tsao, Daniel Levy, and Ramachandran S. Vasan. Framingham heart study: jacc focus seminar, 1/8. Journal of the American College of Cardiology, 77:2680-2692, 6 2021. doi:10.1016/J.JACC.2021.01.059.">Andersson <em>et al.</em>, 2021</a>]</span>.</p>
 <p>The FHS is also widely used as a source of data for educational purposes in the medical field by National Institute of Health (NIH) <span id="id10">[<a class="reference internal" href="#id29" title="National heart, lung, and blood institute. 2021. framingham heart study longitudinal data documentation for teaching dataset. URL: https://biolincc.nhlbi.nih.gov/media/teachingstudies/FHS_Teaching_Longitudinal_Data_Documentation_2021a.pdf."><em>National Heart, Lung, and Blood Institute. 2021. Framingham Heart Study Longitudinal Data Documentation for Teaching Dataset</em>, n.d.</a>]</span>.
 Our dataset, derived from this study and provided by Professor Paul Blanche <span id="id11">[<a class="reference internal" href="#id26" title="Framingham data. URL: https://paulblanche.com/files/DataFramingham.html."><em>Framingham data</em>, n.d.</a>]</span>, encompasses a comprehensive collection of health metrics from 1,363 individuals, meticulously recorded and analyzed to gauge the risk of developing heart disease.</p>
 <section id="data-description">
-<h2>Data Description<a class="headerlink" href="#data-description" title="Permalink to this heading">#</a></h2>
+<h3>Data Description<a class="headerlink" href="#data-description" title="Permalink to this heading">#</a></h3>
 <p>Key variables in this dataset include age, gender, systolic and diastolic blood pressure (SBP and DBP), cholesterol levels, Framingham relative weight (FRW), and smoking habits (measured as cigarettes per day). These variables offer a multifaceted view into each individual’s health status, providing a robust foundation for our predictive analysis. For example, ‘sex’ is categorized into Female or Male, ‘AGE’ represents the age of individuals in years, ‘FRW’ indicates the Framingham relative weight percentage at baseline ranging from 52 to 222, ‘SBP’ and ‘DBP’ measure blood pressure in mmHg, ‘CHOL’ shows cholesterol levels in mg/100ml, and ‘CIG’ quantifies cigarette consumption per day. The ‘disease’ variable,which serves as out target variable, marks the occurrence of coronary heart disease during the study, noted as 1 for occurrence and 0 otherwise.</p>
-<table class="colwidths-auto table">
+<table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Variable</p></th>
 <th class="head"><p>Explanation</p></th>
@@ -411,7 +409,7 @@ Our dataset, derived from this study and provided by Professor Paul Blanche <spa
 </table>
 </section>
 <section id="data-visualization">
-<h2>Data Visualization<a class="headerlink" href="#data-visualization" title="Permalink to this heading">#</a></h2>
+<h3>Data Visualization<a class="headerlink" href="#data-visualization" title="Permalink to this heading">#</a></h3>
 <p>As <a class="reference internal" href="#distribution-of-disease-occurrence"><span class="std std-numref">Figure 1</span></a> shown, there are 1,095 individuals without heart disease and 268 individuals with heart disease, indicating a higher prevalence of non-disease cases in the sample and high class imbalance.</p>
 <figure class="align-default" id="distribution-of-disease-occurrence">
 <a class="reference internal image-reference" href="_images/distribution_of_disease_occurrence.png"><img alt="_images/distribution_of_disease_occurrence.png" src="_images/distribution_of_disease_occurrence.png" style="width: 400px;" /></a>
@@ -457,31 +455,31 @@ Our dataset, derived from this study and provided by Professor Paul Blanche <spa
 </section>
 </section>
 <section id="methodology">
-<h1>Methodology<a class="headerlink" href="#methodology" title="Permalink to this heading">#</a></h1>
+<h2>Methodology<a class="headerlink" href="#methodology" title="Permalink to this heading">#</a></h2>
 <section id="model-specification-and-retionalization">
-<h2>Model Specification and Retionalization<a class="headerlink" href="#model-specification-and-retionalization" title="Permalink to this heading">#</a></h2>
-<p>The selection of k-Nearest Neighbors (kNN) for the prediction of cardiovascular disease (CVD) is underpinned by its well-recognized efficacy in clinical diagnostics. kNN’s simplicity and its inherent capacity to discern intricate, non-linear relationships make it particularly suited for medical datasets, where such complexities are the norm. It has gained traction within the medical research community for its successful application across various diagnostic challenges. <span id="id12">[<a class="reference internal" href="#id23" title="Salim Lahmiri. Integrating convolutional neural networks, knn, and bayesian optimization for efficient diagnosis of alzheimer's disease in magnetic resonance images. Biomedical Signal Processing and Control, 80:104375, 2 2023. doi:10.1016/J.BSPC.2022.104375.">Lahmiri, 2023</a>]</span> utilizes convolutional neural networks (CNN) for automatic feature extraction from MRI images. Receiver operating characteristic (ROC) based feature ranking and selection is employed to reduce the dimensionality of the CNN-based features. And the k-nearest neighbors (kNN) classifier is then optimized using Bayesian optimization (BO) algorithm. The proposed system achieves high classification performance and shows promise for efficient Alzheimer’s disease (AD) diagnosis. <span id="id13">[<a class="reference internal" href="#id22" title="Walid Cherif. Optimization of k-nn algorithm by clustering and reliability coefficients: application to breast-cancer diagnosis. Procedia Computer Science, 127:293-299, 1 2018. doi:10.1016/J.PROCS.2018.01.125.">Cherif, 2018</a>]</span> optimizes the performance of the K-Nearest Neighbors (KNN) algorithm for breast cancer diagnosis by clustering class instances, selecting significant attributes, and weighting similarities with reliability coefficients. The results demonstrate that this approach outperforms other classification techniques, achieving an average f-measure exceeding 94% on the breast cancer dataset.</p>
-<p>Recent scholarly work has showcased the integration of kNN with advanced computational techniques to amplify its diagnostic capabilities in CVD. <span id="id14">[<a class="reference internal" href="#id25" title="M. Akhil jabbar, B.L. Deekshatulu, and Priti Chandra. Classification of heart disease using k- nearest neighbor and genetic algorithm. Procedia Technology, 10:85-94, 1 2013. doi:10.1016/J.PROTCY.2013.12.340.">jabbar <em>et al.</em>, 2013</a>]</span> proposes a new algorithm that combines the K-nearest neighbor (KNN) method with a genetic algorithm for the classification of heart disease. The KNN algorithm is utilized for pattern recognition based on the class of the nearest neighbor, while the genetic algorithm performs a global search to find optimal solutions. The experimental results demonstrate that the proposed algorithm enhances the accuracy in diagnosing heart disease. The study of <span id="id15">[<a class="reference internal" href="#id24" title="Md Mamun Ali, Bikash Kumar Paul, Kawsar Ahmed, Francis M. Bui, Julian M.W. Quinn, and Mohammad Ali Moni. Heart disease prediction using supervised machine learning algorithms: performance analysis and comparison. Computers in Biology and Medicine, 136:104672, 9 2021. doi:10.1016/J.COMPBIOMED.2021.104672.">Ali <em>et al.</em>, 2021</a>]</span> aimed to predict heart disease using data mining techniques and used a heart disease dataset with 14 attributes to compare different classification algorithms. The results showed that the KNN, RF, and DT algorithms achieved 100% accuracy in predicting heart disease.</p>
+<h3>Model Specification and Retionalization<a class="headerlink" href="#model-specification-and-retionalization" title="Permalink to this heading">#</a></h3>
+<p>The selection of k-Nearest Neighbors (kNN) for the prediction of cardiovascular disease (CVD) is underpinned by its well-recognized efficacy in clinical diagnostics. kNN’s simplicity and its inherent capacity to discern intricate, non-linear relationships make it particularly suited for medical datasets, where such complexities are the norm. It has gained traction within the medical research community for its successful application across various diagnostic challenges. <span id="id12">[<a class="reference internal" href="#id23" title="Salim Lahmiri. Integrating convolutional neural networks, knn, and bayesian optimization for efficient diagnosis of alzheimer's disease in magnetic resonance images. Biomedical Signal Processing and Control, 80:104375, 2 2023. doi:10.1016/J.BSPC.2022.104375.">Lahmiri, 2023</a>]</span> utilizes convolutional neural networks (CNN) for automatic feature extraction from MRI images. Receiver operating characteristic (ROC) based feature ranking and selection is employed to reduce the dimensionality of the CNN-based features. And the k-nearest neighbors (kNN) classifier is then optimized using Bayesian optimization (BO) algorithm. The proposed system achieves high classification performance and shows promise for efficient Alzheimer’s disease (AD) diagnosis. <span id="id13">[<a class="reference internal" href="#id22" title="Walid Cherif. Optimization of k-nn algorithm by clustering and reliability coefficients: application to breast-cancer diagnosis. Procedia Computer Science, 127:293-299, 1 2018. doi:10.1016/J.PROCS.2018.01.125.">Cherif, 2018</a>]</span> optimizes the performance of the kNN algorithm for breast cancer diagnosis by clustering class instances, selecting significant attributes, and weighting similarities with reliability coefficients. The results demonstrate that this approach outperforms other classification techniques, achieving an average f-measure exceeding 94% on the breast cancer dataset.</p>
+<p>Recent scholarly work has showcased the integration of kNN with advanced computational techniques to amplify its diagnostic capabilities in CVD. <span id="id14">[<a class="reference internal" href="#id25" title="M. Akhil jabbar, B.L. Deekshatulu, and Priti Chandra. Classification of heart disease using k- nearest neighbor and genetic algorithm. Procedia Technology, 10:85-94, 1 2013. doi:10.1016/J.PROTCY.2013.12.340.">jabbar <em>et al.</em>, 2013</a>]</span> proposes a new algorithm that combines the kNN method with a genetic algorithm for the classification of heart disease. The kNN algorithm is utilized for pattern recognition based on the class of the nearest neighbor, while the genetic algorithm performs a global search to find optimal solutions. The experimental results demonstrate that the proposed algorithm enhances the accuracy in diagnosing heart disease. The study of <span id="id15">[<a class="reference internal" href="#id24" title="Md Mamun Ali, Bikash Kumar Paul, Kawsar Ahmed, Francis M. Bui, Julian M.W. Quinn, and Mohammad Ali Moni. Heart disease prediction using supervised machine learning algorithms: performance analysis and comparison. Computers in Biology and Medicine, 136:104672, 9 2021. doi:10.1016/J.COMPBIOMED.2021.104672.">Ali <em>et al.</em>, 2021</a>]</span> aimed to predict heart disease using data mining techniques and used a heart disease dataset with 14 attributes to compare different classification algorithms. The results showed that the kNN, RF, and DT algorithms achieved 100% accuracy in predicting heart disease.</p>
 </section>
 <section id="evaluation-metrics-and-model-performance">
-<h2>Evaluation Metrics and Model Performance<a class="headerlink" href="#evaluation-metrics-and-model-performance" title="Permalink to this heading">#</a></h2>
+<h3>Evaluation Metrics and Model Performance<a class="headerlink" href="#evaluation-metrics-and-model-performance" title="Permalink to this heading">#</a></h3>
 <p>Given the critical nature of accurately identifying at-risk patients, the study prioritizes recall as the primary evaluation metric. In CVD prediction, the cost of false negatives – overlooking individuals who are actually at risk – is exceedingly high, potentially leading to missed opportunities for early intervention. Therefore, recall, which measures the model’s ability to detect all positive cases, emerges as the most pertinent metric for this study.</p>
 </section>
 <section id="data-preprocessing-and-feature-handling">
-<h2>Data Preprocessing and Feature Handling<a class="headerlink" href="#data-preprocessing-and-feature-handling" title="Permalink to this heading">#</a></h2>
+<h3>Data Preprocessing and Feature Handling<a class="headerlink" href="#data-preprocessing-and-feature-handling" title="Permalink to this heading">#</a></h3>
 <p>A thorough preprocessing protocol is adopted to ensure the data’s suitability for analysis. This includes addressing missing values in numerical attributes through median imputation, a decision driven by the skewed nature of certain variables, notably the cigarette consumption (CIG). This approach preserves the underlying distribution of these features. Additionally, to counter the diverse range of scales across various numerical features, the dataset undergoes normalization using standard scaling This normalization ensures equitable representation of each feature in the model, preventing any single variable from exerting undue influence due to scale disparities. Furthermore, the study incorporates OneHotEncoding for the binary variable SEX with female as reference group.</p>
 </section>
-<section id="hyperparameter-optimization-and-over-sample-approach">
-<h2>Hyperparameter Optimization and Over-Sample Approach<a class="headerlink" href="#hyperparameter-optimization-and-over-sample-approach" title="Permalink to this heading">#</a></h2>
+<section id="hyperparameter-optimization-and-over-sampling-approach">
+<h3>Hyperparameter Optimization and Over-Sampling Approach<a class="headerlink" href="#hyperparameter-optimization-and-over-sampling-approach" title="Permalink to this heading">#</a></h3>
 <p>For the k-Nearest Neighbors (kNN) model, this study optimizes the number of neighbors (n_neighbors). A cross-validation approach was applied across a range of 1 to 20 neighbors, in increments of 5, to determine the ideal balance between underfitting and overfitting, thus ascertaining the most effective neighbor count for accurate classification. To address class imbalance in the kNN model, we implemented Random Over Sampling (ROS), ensuring an equitable class distribution in the training set. This approach significantly enhanced the model’s ability to detect the minority class, a prevalent challenge in medical datasets with disproportionate class sizes.</p>
 </section>
 <section id="estimation-strategy">
-<h2>Estimation Strategy<a class="headerlink" href="#estimation-strategy" title="Permalink to this heading">#</a></h2>
+<h3>Estimation Strategy<a class="headerlink" href="#estimation-strategy" title="Permalink to this heading">#</a></h3>
 <p>Utilizing the scikit-learn Python package <span id="id16">[<a class="reference internal" href="#id21" title="Fabian Pedregosa, Gael Varoquaux, Alexandre Gramfort, Vincent Michel, Bertrand Thirion, Olivier Grisel, Mathieu Blondel, Peter Prettenhofer, Ron Weiss, Vincent Dubourg, Jake Vanderplas, Alexandre Passos, David Cournapeau, Matthieu Brucher, Matthieu Perrot, and Édouard Duchesnay. Scikit-learn: machine learning in python. Journal of Machine Learning Research, 12:2825-2830, 1 2012. URL: https://arxiv.org/abs/1201.0490v4.">Pedregosa <em>et al.</em>, 2012</a>]</span>`, this research benefits from its extensive suite of machine learning tools. This package not only provides efficient implementations of Logistic Regression and kNN but also encompasses a broad spectrum of data pre-processing techniques and metrics for comprehensive model evaluation, all encapsulated within an intuitive framework conducive to streamlined model development and assessment.</p>
 </section>
 </section>
 <section id="results">
-<h1>Results<a class="headerlink" href="#results" title="Permalink to this heading">#</a></h1>
+<h2>Results<a class="headerlink" href="#results" title="Permalink to this heading">#</a></h2>
 <p>In the quest to refine cardiovascular disease prediction models, this analysis reveals a nuanced balance between accuracy <a class="reference internal" href="#accuracy-lines"><span class="std std-numref">Figure 7</span></a> and recall <a class="reference internal" href="#recall-lines"><span class="std std-numref">Figure 8</span></a>, particularly when examining k-Nearest Neighbors (kNN) with and without oversampling. The accuracy plot underscores a steadier, more uniform performance with oversampling, maintaining a high accuracy across the spectrum of neighbors considered. In contrast, the kNN model without oversampling demonstrates a gradual increase in accuracy as the number of neighbors grows, hinting at the model’s sensitivity to the neighbor parameter.</p>
 <p>However, this study’s focus pivots towards recall, a metric of paramount importance in medical diagnostics where missing a true case (false negative) can have dire consequences. The recall plot vividly illustrates the stark enhancement in the recall due to oversampling, particularly in lower neighbor counts. The without-oversampling curve plummets, indicating a high rate of false negatives, whereas the with-oversampling curve consistently captures a higher proportion of positive cases. This enhancement is critical, as it suggests oversampling equips kNN to better identify at-risk patients, making it the preferred approach despite potential trade-offs in accuracy. Thus, the kNN with oversampling, optimized for recall, emerges as a crucial strategy for early and accurate identification of cardiovascular diseases, aligning with the medical imperative to prioritize patient outcomes over model precision.</p>
 <p>The selection of <span class="math notranslate nohighlight">\(k=9\)</span> as the optimal number of neighbors for the kNN model with over-sampling was guided by a careful balance between model complexity and the ability to generalize. A lower <span class="math notranslate nohighlight">\(k\)</span> value, while potentially offering higher flexibility and sensitivity to the training data, runs the risk of overfitting, as it may capture noise and lead to an overly complex model. Conversely, a higher
@@ -507,67 +505,67 @@ Our dataset, derived from this study and provided by Professor Paul Blanche <spa
 <p><span class="caption-number">Fig. 9 </span><span class="caption-text">Feature importance from kNN model with over-sampling.</span><a class="headerlink" href="#radar-feature-importance" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>The confusion matrix shows that out of the cases predicted, <span class="pasted-text">138</span> true negatives (correctly predicted non-CVD cases) and <span class="pasted-text">32</span> true positives (correctly predicted CVD cases) were observed. However, there were also <span class="pasted-text">26</span> false negatives (CVD cases incorrectly predicted as non-CVD) and <span class="pasted-text">77</span> false positives (non-CVD cases incorrectly predicted as CVD), indicating potential areas for improving the model’s precision and recall.</p>
+<p>The confusion matrix shows that out of the cases predicted, <span class="pasted-text">139</span> true negatives (correctly predicted non-CVD cases) and <span class="pasted-text">37</span> true positives (correctly predicted CVD cases) were observed. However, there were also <span class="pasted-text">21</span> false negatives (CVD cases incorrectly predicted as non-CVD) and <span class="pasted-text">76</span> false positives (non-CVD cases incorrectly predicted as CVD), indicating potential areas for improving the model’s precision and recall.</p>
 <figure class="align-default" id="knn-test-data-confusion-matrix">
 <a class="reference internal image-reference" href="_images/knn_test_data_confusion_matrix.png"><img alt="_images/knn_test_data_confusion_matrix.png" src="_images/knn_test_data_confusion_matrix.png" style="width: 600px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 10 </span><span class="caption-text">Feature importance from kNN model with over-sampling.</span><a class="headerlink" href="#knn-test-data-confusion-matrix" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>The classification report <a class="reference internal" href="#test-scores-df"><span class="std std-numref">Figure 11</span></a> provides insights into the model’s performance on the test set. The support for non-CVD cases is <span class="pasted-text">273.0</span>, indicating that there were <span class="pasted-text">215.0</span> instances of non-CVD in the test data that the model attempted to classify. On the other hand, there were <span class="pasted-text">58.0</span> instances of CVD, reflecting a smaller subset of the data. The classifier’s performance in distinguishing between patients with and without cardiovascular disease (CVD) indicates a recall of <span class="pasted-text">0.552</span> for CVD cases, suggesting that approximately, 55.2% of actual <span class="pasted-text">58.0</span> CVD cases were correctly identified. While the precision for non-CVD cases stands at a higher threshold, it is the recall metric that is of paramount concern in medical diagnostics to ensure at-risk patients are not overlooked. Overall accuracy of the model is <span class="pasted-text">0.623</span>, which, while indicative of a moderate predictive ability, underscores the necessity of optimizing the recall for CVD patients due to the high stakes involved in early and accurate diagnosis. It is crucial to enhance the model’s sensitivity to CVD cases to improve patient outcomes and healthcare delivery.</p>
+<p>The classification report <a class="reference internal" href="#test-scores-df"><span class="std std-numref">Figure 11</span></a> provides insights into the model’s performance on the test set. The support for non-CVD cases is <span class="pasted-text">273.0</span>, indicating that there were <span class="pasted-text">215.0</span> instances of non-CVD in the test data that the model attempted to classify. On the other hand, there were <span class="pasted-text">58.0</span> instances of CVD, reflecting a smaller subset of the data. The classifier’s performance in distinguishing between patients with and without cardiovascular disease (CVD) indicates a recall of <span class="pasted-text">0.638</span> for CVD cases, suggesting that approximately, 55.2% of actual <span class="pasted-text">58.0</span> CVD cases were correctly identified. While the precision for non-CVD cases stands at a higher threshold, it is the recall metric that is of paramount concern in medical diagnostics to ensure at-risk patients are not overlooked. Overall accuracy of the model is <span class="pasted-text">0.645</span>, which, while indicative of a moderate predictive ability, underscores the necessity of optimizing the recall for CVD patients due to the high stakes involved in early and accurate diagnosis. It is crucial to enhance the model’s sensitivity to CVD cases to improve patient outcomes and healthcare delivery.</p>
 <figure class="align-default" id="test-scores-df" style="width: 400px">
 <div class="output text_html"><style type="text/css">
-#T_e8aa6 caption {
+#T_77dfb caption {
   color: black;
   font-size: 16px;
 }
 </style>
-<table id="T_e8aa6">
+<table id="T_77dfb">
   <caption>Classification Report</caption>
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_e8aa6_level0_col0" class="col_heading level0 col0" >precision</th>
-      <th id="T_e8aa6_level0_col1" class="col_heading level0 col1" >recall</th>
-      <th id="T_e8aa6_level0_col2" class="col_heading level0 col2" >f1-score</th>
-      <th id="T_e8aa6_level0_col3" class="col_heading level0 col3" >support</th>
+      <th id="T_77dfb_level0_col0" class="col_heading level0 col0" >precision</th>
+      <th id="T_77dfb_level0_col1" class="col_heading level0 col1" >recall</th>
+      <th id="T_77dfb_level0_col2" class="col_heading level0 col2" >f1-score</th>
+      <th id="T_77dfb_level0_col3" class="col_heading level0 col3" >support</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_e8aa6_level0_row0" class="row_heading level0 row0" >non-CVD</th>
-      <td id="T_e8aa6_row0_col0" class="data row0 col0" >0.841</td>
-      <td id="T_e8aa6_row0_col1" class="data row0 col1" >0.642</td>
-      <td id="T_e8aa6_row0_col2" class="data row0 col2" >0.728</td>
-      <td id="T_e8aa6_row0_col3" class="data row0 col3" >215.000</td>
+      <th id="T_77dfb_level0_row0" class="row_heading level0 row0" >non-CVD</th>
+      <td id="T_77dfb_row0_col0" class="data row0 col0" >0.869</td>
+      <td id="T_77dfb_row0_col1" class="data row0 col1" >0.647</td>
+      <td id="T_77dfb_row0_col2" class="data row0 col2" >0.741</td>
+      <td id="T_77dfb_row0_col3" class="data row0 col3" >215.000</td>
     </tr>
     <tr>
-      <th id="T_e8aa6_level0_row1" class="row_heading level0 row1" >CVD</th>
-      <td id="T_e8aa6_row1_col0" class="data row1 col0" >0.294</td>
-      <td id="T_e8aa6_row1_col1" class="data row1 col1" >0.552</td>
-      <td id="T_e8aa6_row1_col2" class="data row1 col2" >0.383</td>
-      <td id="T_e8aa6_row1_col3" class="data row1 col3" >58.000</td>
+      <th id="T_77dfb_level0_row1" class="row_heading level0 row1" >CVD</th>
+      <td id="T_77dfb_row1_col0" class="data row1 col0" >0.327</td>
+      <td id="T_77dfb_row1_col1" class="data row1 col1" >0.638</td>
+      <td id="T_77dfb_row1_col2" class="data row1 col2" >0.433</td>
+      <td id="T_77dfb_row1_col3" class="data row1 col3" >58.000</td>
     </tr>
     <tr>
-      <th id="T_e8aa6_level0_row2" class="row_heading level0 row2" >accuracy</th>
-      <td id="T_e8aa6_row2_col0" class="data row2 col0" >0.623</td>
-      <td id="T_e8aa6_row2_col1" class="data row2 col1" >0.623</td>
-      <td id="T_e8aa6_row2_col2" class="data row2 col2" >0.623</td>
-      <td id="T_e8aa6_row2_col3" class="data row2 col3" >0.623</td>
+      <th id="T_77dfb_level0_row2" class="row_heading level0 row2" >accuracy</th>
+      <td id="T_77dfb_row2_col0" class="data row2 col0" >0.645</td>
+      <td id="T_77dfb_row2_col1" class="data row2 col1" >0.645</td>
+      <td id="T_77dfb_row2_col2" class="data row2 col2" >0.645</td>
+      <td id="T_77dfb_row2_col3" class="data row2 col3" >0.645</td>
     </tr>
     <tr>
-      <th id="T_e8aa6_level0_row3" class="row_heading level0 row3" >macro avg</th>
-      <td id="T_e8aa6_row3_col0" class="data row3 col0" >0.568</td>
-      <td id="T_e8aa6_row3_col1" class="data row3 col1" >0.597</td>
-      <td id="T_e8aa6_row3_col2" class="data row3 col2" >0.556</td>
-      <td id="T_e8aa6_row3_col3" class="data row3 col3" >273.000</td>
+      <th id="T_77dfb_level0_row3" class="row_heading level0 row3" >macro avg</th>
+      <td id="T_77dfb_row3_col0" class="data row3 col0" >0.598</td>
+      <td id="T_77dfb_row3_col1" class="data row3 col1" >0.642</td>
+      <td id="T_77dfb_row3_col2" class="data row3 col2" >0.587</td>
+      <td id="T_77dfb_row3_col3" class="data row3 col3" >273.000</td>
     </tr>
     <tr>
-      <th id="T_e8aa6_level0_row4" class="row_heading level0 row4" >weighted avg</th>
-      <td id="T_e8aa6_row4_col0" class="data row4 col0" >0.725</td>
-      <td id="T_e8aa6_row4_col1" class="data row4 col1" >0.623</td>
-      <td id="T_e8aa6_row4_col2" class="data row4 col2" >0.655</td>
-      <td id="T_e8aa6_row4_col3" class="data row4 col3" >273.000</td>
+      <th id="T_77dfb_level0_row4" class="row_heading level0 row4" >weighted avg</th>
+      <td id="T_77dfb_row4_col0" class="data row4 col0" >0.754</td>
+      <td id="T_77dfb_row4_col1" class="data row4 col1" >0.645</td>
+      <td id="T_77dfb_row4_col2" class="data row4 col2" >0.676</td>
+      <td id="T_77dfb_row4_col3" class="data row4 col3" >273.000</td>
     </tr>
   </tbody>
 </table>
@@ -577,15 +575,23 @@ Our dataset, derived from this study and provided by Professor Paul Blanche <spa
 </figure>
 </section>
 <section id="discussion">
-<h1>Discussion<a class="headerlink" href="#discussion" title="Permalink to this heading">#</a></h1>
+<h2>Discussion<a class="headerlink" href="#discussion" title="Permalink to this heading">#</a></h2>
 <section id="contribution">
-<h2>Contribution<a class="headerlink" href="#contribution" title="Permalink to this heading">#</a></h2>
+<h3>Contribution<a class="headerlink" href="#contribution" title="Permalink to this heading">#</a></h3>
 <p>This study has significant implications for both clinical practice and public health policy, primarily in enhancing early detection of cardiovascular disease (CVD) risk and enabling more tailored healthcare approaches.</p>
 <p>Clinical Applications: The findings offer a critical tool for healthcare providers in identifying individuals with elevated CVD risk. Early detection through predictive modeling facilitates timely interventions and personalized treatment strategies, potentially improving patient outcomes. The ability to profile individual risk factors paves the way for more customized patient care, aligning treatment plans with specific patient needs.</p>
 <p>Public Health Policy and Prevention: This study delivers actionable insights that could refine preventative strategies aimed at populations predisposed to CVD. Notably, the kNN model underscores the significance of cholesterol levels and smoking habits alongside traditional markers like age and systolic blood pressure, underscoring a broader spectrum of modifiable risk factors. This empowers policymakers to sculpt targeted interventions and allocate resources judiciously, thereby enhancing the efficacy of public health campaigns. Moreover, the implementation of such predictive models in healthcare systems could strategically direct preventative efforts toward individuals with the highest risk, thereby enhancing the overall health outcomes on a population level.</p>
 </section>
+<section id="limitations">
+<h3>Limitations<a class="headerlink" href="#limitations" title="Permalink to this heading">#</a></h3>
+<p>This research, while offering valuable insights into the predictive modeling of cardiovascular disease (CVD) risk, encounters several limitations that warrant acknowledgment and consideration for future work. The study achieved modest levels of accuracy and recall in the predictive modeling. This limitation is partly attributable to the constrained size and scope of the dataset utilized. With just over 1000 observations sourced from publicly available data primarily intended for teaching and practice, the model’s training and validation might not comprehensively encapsulate the complex, multifaceted nature of CVD risk factors. Larger, more diverse datasets could potentially enhance the model’s predictive power.</p>
+<p>While the Framingham Heart Study is a rich source of clinical data, its span of over 70 years introduces certain challenges. Medical practices, diagnostic criteria, and patient demographics have evolved considerably over this period. Therefore, applying findings from this historical dataset to contemporary clinical scenarios may have inherent limitations. Ideally, employing machine learning techniques on real-time, real-world clinical data could yield more nuanced and current insights.</p>
+<p>The research primarily revolves around the kNN algorithm, supplemented by oversampling to address class imbalance. Although kNN is a robust and effective method, relying exclusively on it might overlook the potential benefits of other predictive models. Machine learning in healthcare is a rapidly advancing field, and integrating a variety of models, such as random forests, support vector machines, or deep learning approaches, could offer a more comprehensive understanding and improved predictive accuracy.</p>
+<p>The generalizability of the study’s findings might be limited due to the specific demographic and clinical characteristics of the Framingham study cohort. The cohort, primarily from a specific geographical location and demographic, may not accurately represent the global population’s diverse spectrum. Future studies should aim to include more heterogeneous populations to enhance the applicability and relevance of the findings.</p>
+<p>These limitations highlight the need for ongoing research and iterative model refinement. Future studies should aim to incorporate larger, more diverse datasets, explore a wider range of predictive models, and continually adapt to the evolving landscape of cardiovascular health and risk factors.</p>
+</section>
 <section id="future-work">
-<h2>Future Work<a class="headerlink" href="#future-work" title="Permalink to this heading">#</a></h2>
+<h3>Future Work<a class="headerlink" href="#future-work" title="Permalink to this heading">#</a></h3>
 <p>The imperative to mitigate false negatives in cardiovascular disease diagnostics cannot be overstated, particularly given the dire consequences of delayed or missed treatment opportunities. In response, this study has concentrated on refining the k-Nearest Neighbors (kNN) model—a method with a rich history of application in medical diagnostics—augmented with an oversampling technique aimed at bolstering the recall metric. Despite these efforts, the accuracy and recall rates achieved through this model may not fully align with the elevated benchmarks typically anticipated of medical diagnostic tools.</p>
 <p>The modest accuracy and recall observed underscore a need for further methodological refinements. This includes a comprehensive assessment of the model within clinical contexts, where the balance between sensitivity (recall) and specificity (accuracy) must be carefully managed against the backdrop of the costs associated with false positives and negatives. Such costs, both in economic and human terms, necessitate a nuanced approach to optimize the model’s performance in actual clinical practice.</p>
 <p>Furthermore, while age and systolic blood pressure are well-documented risk factors, our analysis illuminates the substantial roles that cholesterol levels and smoking habits play in the model’s predictive capacity. These findings suggest potential avenues for future research to delve into the intricate web of causative factors contributing to CVD, thereby enhancing the model’s diagnostic precision.</p>
@@ -593,53 +599,68 @@ Our dataset, derived from this study and provided by Professor Paul Blanche <spa
 </section>
 </section>
 <section id="references">
-<h1>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h1>
+<h2>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h2>
 <div class="docutils container" id="id17">
-<dl class="citation">
-<dt class="label" id="id27"><span class="brackets"><a class="fn-backref" href="#id6">niha</a></span></dt>
-<dd><p>Biolincc: framingham heart study-cohort (fhs-cohort). URL: <a class="reference external" href="https://biolincc.nhlbi.nih.gov/studies/framcohort/">https://biolincc.nhlbi.nih.gov/studies/framcohort/</a>.</p>
-</dd>
-<dt class="label" id="id30"><span class="brackets"><a class="fn-backref" href="#id5">who</a></span></dt>
-<dd><p>Cardiovascular diseases (cvds). URL: <a class="reference external" href="https://www.who.int/news-room/fact-sheets/detail/cardiovascular-diseases-(cvds)">https://www.who.int/news-room/fact-sheets/detail/cardiovascular-diseases-(cvds)</a>.</p>
-</dd>
-<dt class="label" id="id31"><span class="brackets">whf</span><span class="fn-backref">(<a href="#id2">1</a>,<a href="#id3">2</a>)</span></dt>
-<dd><p>Deaths from cardiovascular disease surged 60. URL: <a class="reference external" href="https://world-heart-federation.org/news/deaths-from-cardiovascular-disease-surged-60-globally-over-the-last-30-years-report/">https://world-heart-federation.org/news/deaths-from-cardiovascular-disease-surged-60-globally-over-the-last-30-years-report/</a>.</p>
-</dd>
-<dt class="label" id="id28"><span class="brackets"><a class="fn-backref" href="#id4">fhs</a></span></dt>
-<dd><p>Framingham heart study (three generations of dedication). URL: <a class="reference external" href="https://www.framinghamheartstudy.org/">https://www.framinghamheartstudy.org/</a>.</p>
-</dd>
-<dt class="label" id="id26"><span class="brackets"><a class="fn-backref" href="#id11">dat</a></span></dt>
-<dd><p>Framingham data. URL: <a class="reference external" href="https://paulblanche.com/files/DataFramingham.html">https://paulblanche.com/files/DataFramingham.html</a>.</p>
-</dd>
-<dt class="label" id="id29"><span class="brackets"><a class="fn-backref" href="#id10">nihb</a></span></dt>
-<dd><p>National heart, lung, and blood institute. 2021. framingham heart study longitudinal data documentation for teaching dataset. URL: <a class="reference external" href="https://biolincc.nhlbi.nih.gov/media/teachingstudies/FHS_Teaching_Longitudinal_Data_Documentation_2021a.pdf">https://biolincc.nhlbi.nih.gov/media/teachingstudies/FHS_Teaching_Longitudinal_Data_Documentation_2021a.pdf</a>.</p>
-</dd>
-<dt class="label" id="id32"><span class="brackets"><a class="fn-backref" href="#id1">whr</a></span></dt>
-<dd><p>World heart report 2023: full report - world heart federation. URL: <a class="reference external" href="https://world-heart-federation.org/resource/world-heart-report-2023/">https://world-heart-federation.org/resource/world-heart-report-2023/</a>.</p>
-</dd>
-<dt class="label" id="id24"><span class="brackets"><a class="fn-backref" href="#id15">APA+21</a></span></dt>
-<dd><p>Md Mamun Ali, Bikash Kumar Paul, Kawsar Ahmed, Francis M. Bui, Julian M.W. Quinn, and Mohammad Ali Moni. Heart disease prediction using supervised machine learning algorithms: performance analysis and comparison. <em>Computers in Biology and Medicine</em>, 136:104672, 9 2021. <a class="reference external" href="https://doi.org/10.1016/J.COMPBIOMED.2021.104672">doi:10.1016/J.COMPBIOMED.2021.104672</a>.</p>
-</dd>
-<dt class="label" id="id19"><span class="brackets"><a class="fn-backref" href="#id7">AJB+19</a></span></dt>
-<dd><p>Charlotte Andersson, Andrew D. Johnson, Emelia J. Benjamin, Daniel Levy, and Ramachandran S. Vasan. 70-year legacy of the framingham heart study. <em>Nature Reviews Cardiology 2019 16:11</em>, 16:687–698, 5 2019. URL: <a class="reference external" href="https://www.nature.com/articles/s41569-019-0202-5">https://www.nature.com/articles/s41569-019-0202-5</a>, <a class="reference external" href="https://doi.org/10.1038/s41569-019-0202-5">doi:10.1038/s41569-019-0202-5</a>.</p>
-</dd>
-<dt class="label" id="id20"><span class="brackets"><a class="fn-backref" href="#id9">ANT+21</a></span></dt>
-<dd><p>Charlotte Andersson, Matthew Nayor, Connie W. Tsao, Daniel Levy, and Ramachandran S. Vasan. Framingham heart study: jacc focus seminar, 1/8. <em>Journal of the American College of Cardiology</em>, 77:2680–2692, 6 2021. <a class="reference external" href="https://doi.org/10.1016/J.JACC.2021.01.059">doi:10.1016/J.JACC.2021.01.059</a>.</p>
-</dd>
-<dt class="label" id="id22"><span class="brackets"><a class="fn-backref" href="#id13">Che18</a></span></dt>
-<dd><p>Walid Cherif. Optimization of k-nn algorithm by clustering and reliability coefficients: application to breast-cancer diagnosis. <em>Procedia Computer Science</em>, 127:293–299, 1 2018. <a class="reference external" href="https://doi.org/10.1016/J.PROCS.2018.01.125">doi:10.1016/J.PROCS.2018.01.125</a>.</p>
-</dd>
-<dt class="label" id="id25"><span class="brackets"><a class="fn-backref" href="#id14">jDC13</a></span></dt>
-<dd><p>M. Akhil jabbar, B.L. Deekshatulu, and Priti Chandra. Classification of heart disease using k- nearest neighbor and genetic algorithm. <em>Procedia Technology</em>, 10:85–94, 1 2013. <a class="reference external" href="https://doi.org/10.1016/J.PROTCY.2013.12.340">doi:10.1016/J.PROTCY.2013.12.340</a>.</p>
-</dd>
-<dt class="label" id="id23"><span class="brackets"><a class="fn-backref" href="#id12">Lah23</a></span></dt>
-<dd><p>Salim Lahmiri. Integrating convolutional neural networks, knn, and bayesian optimization for efficient diagnosis of alzheimer's disease in magnetic resonance images. <em>Biomedical Signal Processing and Control</em>, 80:104375, 2 2023. <a class="reference external" href="https://doi.org/10.1016/J.BSPC.2022.104375">doi:10.1016/J.BSPC.2022.104375</a>.</p>
-</dd>
-<dt class="label" id="id21"><span class="brackets"><a class="fn-backref" href="#id16">PVG+12</a></span></dt>
-<dd><p>Fabian Pedregosa, Gael Varoquaux, Alexandre Gramfort, Vincent Michel, Bertrand Thirion, Olivier Grisel, Mathieu Blondel, Peter Prettenhofer, Ron Weiss, Vincent Dubourg, Jake Vanderplas, Alexandre Passos, David Cournapeau, Matthieu Brucher, Matthieu Perrot, and Édouard Duchesnay. Scikit-learn: machine learning in python. <em>Journal of Machine Learning Research</em>, 12:2825–2830, 1 2012. URL: <a class="reference external" href="https://arxiv.org/abs/1201.0490v4">https://arxiv.org/abs/1201.0490v4</a>.</p>
-</dd>
-</dl>
+<div class="citation" id="id27" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id6">niha</a><span class="fn-bracket">]</span></span>
+<p>Biolincc: framingham heart study-cohort (fhs-cohort). URL: <a class="reference external" href="https://biolincc.nhlbi.nih.gov/studies/framcohort/">https://biolincc.nhlbi.nih.gov/studies/framcohort/</a>.</p>
 </div>
+<div class="citation" id="id30" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id5">who</a><span class="fn-bracket">]</span></span>
+<p>Cardiovascular diseases (cvds). URL: <a class="reference external" href="https://www.who.int/news-room/fact-sheets/detail/cardiovascular-diseases-(cvds)">https://www.who.int/news-room/fact-sheets/detail/cardiovascular-diseases-(cvds)</a>.</p>
+</div>
+<div class="citation" id="id31" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>whf<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id2">1</a>,<a role="doc-backlink" href="#id3">2</a>)</span>
+<p>Deaths from cardiovascular disease surged 60. URL: <a class="reference external" href="https://world-heart-federation.org/news/deaths-from-cardiovascular-disease-surged-60-globally-over-the-last-30-years-report/">https://world-heart-federation.org/news/deaths-from-cardiovascular-disease-surged-60-globally-over-the-last-30-years-report/</a>.</p>
+</div>
+<div class="citation" id="id28" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">fhs</a><span class="fn-bracket">]</span></span>
+<p>Framingham heart study (three generations of dedication). URL: <a class="reference external" href="https://www.framinghamheartstudy.org/">https://www.framinghamheartstudy.org/</a>.</p>
+</div>
+<div class="citation" id="id26" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id11">dat</a><span class="fn-bracket">]</span></span>
+<p>Framingham data. URL: <a class="reference external" href="https://paulblanche.com/files/DataFramingham.html">https://paulblanche.com/files/DataFramingham.html</a>.</p>
+</div>
+<div class="citation" id="id29" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id10">nihb</a><span class="fn-bracket">]</span></span>
+<p>National heart, lung, and blood institute. 2021. framingham heart study longitudinal data documentation for teaching dataset. URL: <a class="reference external" href="https://biolincc.nhlbi.nih.gov/media/teachingstudies/FHS_Teaching_Longitudinal_Data_Documentation_2021a.pdf">https://biolincc.nhlbi.nih.gov/media/teachingstudies/FHS_Teaching_Longitudinal_Data_Documentation_2021a.pdf</a>.</p>
+</div>
+<div class="citation" id="id32" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">whr</a><span class="fn-bracket">]</span></span>
+<p>World heart report 2023: full report - world heart federation. URL: <a class="reference external" href="https://world-heart-federation.org/resource/world-heart-report-2023/">https://world-heart-federation.org/resource/world-heart-report-2023/</a>.</p>
+</div>
+<div class="citation" id="id24" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id15">APA+21</a><span class="fn-bracket">]</span></span>
+<p>Md Mamun Ali, Bikash Kumar Paul, Kawsar Ahmed, Francis M. Bui, Julian M.W. Quinn, and Mohammad Ali Moni. Heart disease prediction using supervised machine learning algorithms: performance analysis and comparison. <em>Computers in Biology and Medicine</em>, 136:104672, 9 2021. <a class="reference external" href="https://doi.org/10.1016/J.COMPBIOMED.2021.104672">doi:10.1016/J.COMPBIOMED.2021.104672</a>.</p>
+</div>
+<div class="citation" id="id19" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id7">AJB+19</a><span class="fn-bracket">]</span></span>
+<p>Charlotte Andersson, Andrew D. Johnson, Emelia J. Benjamin, Daniel Levy, and Ramachandran S. Vasan. 70-year legacy of the framingham heart study. <em>Nature Reviews Cardiology 2019 16:11</em>, 16:687–698, 5 2019. URL: <a class="reference external" href="https://www.nature.com/articles/s41569-019-0202-5">https://www.nature.com/articles/s41569-019-0202-5</a>, <a class="reference external" href="https://doi.org/10.1038/s41569-019-0202-5">doi:10.1038/s41569-019-0202-5</a>.</p>
+</div>
+<div class="citation" id="id20" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id9">ANT+21</a><span class="fn-bracket">]</span></span>
+<p>Charlotte Andersson, Matthew Nayor, Connie W. Tsao, Daniel Levy, and Ramachandran S. Vasan. Framingham heart study: jacc focus seminar, 1/8. <em>Journal of the American College of Cardiology</em>, 77:2680–2692, 6 2021. <a class="reference external" href="https://doi.org/10.1016/J.JACC.2021.01.059">doi:10.1016/J.JACC.2021.01.059</a>.</p>
+</div>
+<div class="citation" id="id22" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id13">Che18</a><span class="fn-bracket">]</span></span>
+<p>Walid Cherif. Optimization of k-nn algorithm by clustering and reliability coefficients: application to breast-cancer diagnosis. <em>Procedia Computer Science</em>, 127:293–299, 1 2018. <a class="reference external" href="https://doi.org/10.1016/J.PROCS.2018.01.125">doi:10.1016/J.PROCS.2018.01.125</a>.</p>
+</div>
+<div class="citation" id="id25" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id14">jDC13</a><span class="fn-bracket">]</span></span>
+<p>M. Akhil jabbar, B.L. Deekshatulu, and Priti Chandra. Classification of heart disease using k- nearest neighbor and genetic algorithm. <em>Procedia Technology</em>, 10:85–94, 1 2013. <a class="reference external" href="https://doi.org/10.1016/J.PROTCY.2013.12.340">doi:10.1016/J.PROTCY.2013.12.340</a>.</p>
+</div>
+<div class="citation" id="id23" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id12">Lah23</a><span class="fn-bracket">]</span></span>
+<p>Salim Lahmiri. Integrating convolutional neural networks, knn, and bayesian optimization for efficient diagnosis of alzheimer's disease in magnetic resonance images. <em>Biomedical Signal Processing and Control</em>, 80:104375, 2 2023. <a class="reference external" href="https://doi.org/10.1016/J.BSPC.2022.104375">doi:10.1016/J.BSPC.2022.104375</a>.</p>
+</div>
+<div class="citation" id="id21" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id16">PVG+12</a><span class="fn-bracket">]</span></span>
+<p>Fabian Pedregosa, Gael Varoquaux, Alexandre Gramfort, Vincent Michel, Bertrand Thirion, Olivier Grisel, Mathieu Blondel, Peter Prettenhofer, Ron Weiss, Vincent Dubourg, Jake Vanderplas, Alexandre Passos, David Cournapeau, Matthieu Brucher, Matthieu Perrot, and Édouard Duchesnay. Scikit-learn: machine learning in python. <em>Journal of Machine Learning Research</em>, 12:2825–2830, 1 2012. URL: <a class="reference external" href="https://arxiv.org/abs/1201.0490v4">https://arxiv.org/abs/1201.0490v4</a>.</p>
+</div>
+</div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -687,31 +708,30 @@ Our dataset, derived from this study and provided by Professor Paul Blanche <spa
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">CardioPredict: Assessing Cardiovascular Disease Risk</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#abstract">Abstract</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#data">Data</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-description">Data Description</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-visualization">Data Visualization</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#abstract">Abstract</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data">Data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-description">Data Description</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-visualization">Data Visualization</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#methodology">Methodology</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#model-specification-and-retionalization">Model Specification and Retionalization</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluation-metrics-and-model-performance">Evaluation Metrics and Model Performance</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-preprocessing-and-feature-handling">Data Preprocessing and Feature Handling</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hyperparameter-optimization-and-over-sample-approach">Hyperparameter Optimization and Over-Sample Approach</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estimation-strategy">Estimation Strategy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#methodology">Methodology</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#model-specification-and-retionalization">Model Specification and Retionalization</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluation-metrics-and-model-performance">Evaluation Metrics and Model Performance</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-preprocessing-and-feature-handling">Data Preprocessing and Feature Handling</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hyperparameter-optimization-and-over-sampling-approach">Hyperparameter Optimization and Over-Sampling Approach</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#estimation-strategy">Estimation Strategy</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#results">Results</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#discussion">Discussion</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contribution">Contribution</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#future-work">Future Work</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#results">Results</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#discussion">Discussion</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contribution">Contribution</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#limitations">Limitations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#future-work">Future Work</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
 </ul>
-
   </nav></div>
 
 </div></div>
