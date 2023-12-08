@@ -55,6 +55,9 @@ clean:
 	rm -f results/figures/age_and_health_indicators_exhibit_elevated_heart_disease.png
 	rm -f results/figures/correlation_matrix_of_the_features.png
 	rm -f results/figures/pairwise_scatter_plot_matrix.png
+	rm -f results/figures/accuracy_lines.png
+	rm -f results/figures/knn_test_data_confusion_matrix.png 
+	rm -f results/figures/recall_lines.png
 	rm -f results/figures/distribution_of_the_sex_variable.png
 	rm -f results/figures/boxplot_of_specified_numerical_features.png
 	rm -f results/tables/knn_selection
