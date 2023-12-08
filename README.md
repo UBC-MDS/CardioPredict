@@ -114,6 +114,15 @@ docker compose up
    jupyter-book build report
    cp -r report/_build/html/* docs
    ```
+To replicate the analysis, you can also run the following command from the root directory of this project:
+```shell
+make all
+```
+To reset the repository to its original clean state, run the following command from the root directory of this project:
+```shell
+make clean
+```
+
 6. Clean Up
    To stop the Docker container, go back to your terminal where you launched the container.
    Press Ctrl + C to shut it down.
