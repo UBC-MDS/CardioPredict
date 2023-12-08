@@ -5,12 +5,12 @@ data/raw/framingham.csv:
 	python scripts/download_data.py --url "https://paulblanche.com/files/framingham.csv" --filepath "data/raw/framingham.csv"
 
 # Split data into train and test sets, preprocess data, and save preprocessor
-data/processed/train_df.csv data/processed/X_train.csv data/processed/y_train.csv data/processed/X_test.csv data/processed/y_test.csv results/models/preprocessor.pickle: data/raw/framingham.csv
+data/processed/train_data.csv data/processed/X_train.csv data/processed/y_train.csv data/processed/X_test.csv data/processed/y_test.csv results/models/preprocessor.pickle: data/raw/framingham.csv
 	python scripts/split_preprocess_data.py --input-file data/raw/framingham.csv --split-dir data/processed/ --preprocess-dir data/processed/ --preprocessor-to results/models/
 
 # Perform EDA and save plots
-results/figures/eda_plots: data/processed/train_df.csv
-	python scripts/eda.py --df=data/processed/train_df.csv --plot-to=results/figures --data-to=data/processed
+results/figures/eda_plots: data/processed/train_data.csv
+	python scripts/eda.py --df=data/processed/train_data.csv --plot-to=results/figures --data-to=data/processed
 
 # Select model, create and visualize tuning, and save plots
 results/tables/knn_selection results/figures/knn_selection_plots: data/processed/X_train.csv data/processed/y_train.csv results/models/preprocessor.pickle
