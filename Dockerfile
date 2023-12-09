@@ -9,6 +9,7 @@ RUN  conda install -y \
     numpy=1.26.0 \
     pytest=7.4.3 \
     click=8.1.7 \
-    jupyter-book=0.15.1 
+    jupyter-book=0.15.1 \
+    make=4.2.1
 
 RUN pip install imblearn==0.0 
