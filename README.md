@@ -114,14 +114,6 @@ docker compose up
    jupyter-book build report
    cp -r report/_build/html/* docs
    ```
-To replicate the analysis, you can also run the following command from the root directory of this project:
-```shell
-make all
-```
-To reset the repository to its original clean state, run the following command from the root directory of this project:
-```shell
-make clean
-```
 
 6. Clean Up
    
@@ -133,6 +125,15 @@ make clean
 
 ```shell
 docker compose rm
+```
+## Running the analysis
+To replicate the analysis, you can run the following command from the root directory of this project:
+```shell
+docker-compose run --rm disease_pred make all
+```
+To reset the repository to its original clean state, run the following command from the root directory of this project:
+```shell
+docker-compose run --rm disease_pred make clean
 ```
 
 ## Dependencies
