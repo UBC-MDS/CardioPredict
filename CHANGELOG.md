@@ -133,7 +133,7 @@ I really enjoy going through this project and gain some knowledge about Cardiova
 
 ### Added🆕
 
-- Reivew 1 from @carrieyanyi: added altair_saver=0.5.0 into dockerfile. See [commit](https://github.com/UBC-MDS/CardioPredict/commit/2aa955e1375eebc2ff9324bd54c4694c1eab375a).
+- Reivew 1 from @carrieyanyi: added vl-convert-python=1.1.0 into dockerfile. See [commit](https://github.com/UBC-MDS/CardioPredict/commit/a7b038e5f04d7ce7466018899480bc86740210c2).
 
 ### Changed🔄
 
