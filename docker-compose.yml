@@ -1,6 +1,6 @@
 services:
   disease_pred:
-    image: sandragross/522_project_10:4b11303
+    image: sandragross/522_project_10:a7b038e
     ports:
       - "8888:8888"
     volumes:
@@ -8,6 +8,6 @@ services:
     deploy:
       resources:
         limits:
-          memory: 5G
+          memory: 15G
     platform: linux/amd64
       
