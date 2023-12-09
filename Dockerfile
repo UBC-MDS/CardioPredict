@@ -2,7 +2,6 @@ FROM quay.io/jupyter/minimal-notebook:2023-11-19
 
 RUN  conda install -y \
     altair=5.1.2 \
-    altair_saver=0.5.0 \
     matplotlib=3.8.0 \
     nb_conda_kernels=2.3.1 \
     pandas=2.1.1 \
